@@ -1,0 +1,27 @@
+{
+  "name": "The Y.O.U.T.H Project",
+  "short_name": "Y.O.U.T.H",
+  "description": "Embrace Your Youth, Create Your Legacy - A transformative cultural festival",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#4a5a52",
+  "theme_color": "#4a5a52",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "events", "lifestyle"],
+  "lang": "en-US",
+  "dir": "ltr"
+}

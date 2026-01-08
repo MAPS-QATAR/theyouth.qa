@@ -1,0 +1,23 @@
+# robots.txt for The Y.O.U.T.H Project
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://youth.qa/sitemap.xml
+
+# Disallow admin or private paths if any
+Disallow: /api/
+Disallow: /_next/
+
+# Allow all media
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.mp4$
+Allow: /*.webm$
+
+# Crawl delay (optional, be nice to servers)
+Crawl-delay: 0
