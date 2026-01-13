@@ -130,11 +130,14 @@ export default function HeroSection() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h1 className="text-5xl md:text-7xl xl:text-8xlfont-bold text-[#e8ded2] leading-tight">
-                            <span className="inline-block">Find </span>
-                            {/* Circular Image 1 */}
-                            <motion.span
-                                className="inline-block relative mx-4"
+                        {/* Mobile-optimized layout */}
+                        <div className="block md:hidden">
+                            <h1 className="text-4xl font-bold text-[#e8ded2] leading-tight mb-4">
+                                Find seminar
+                            </h1>
+                            {/* Circular Image 1 - centered on mobile */}
+                            <motion.div
+                                className="flex justify-center my-4"
                                 initial={{ scale: 0, rotate: -180 }}
                                 animate={{ scale: 1, rotate: 0 }}
                                 transition={{ duration: 0.8, delay: 0.3, type: "spring" }}
@@ -142,87 +145,135 @@ export default function HeroSection() {
                                 <img
                                     src="/arab-lady-1.jpg"
                                     alt="Youth creativity"
-                                    className="w-24 h-24 md:w-32 md:h-32 xl:w-40 xl:h-40 rounded-full object-cover border-4 border-[#e8ded2] inline-block align-middle"
+                                    className="w-20 h-20 rounded-full object-cover border-4 border-[#e8ded2]"
                                 />
-                            </motion.span>
-                            <span className="inline-block">seminar</span>
-                        </h1>
-
-                        <h1 className="text-5xl md:text-7xl xl:text-8xlfont-bold text-[#e8ded2] leading-tight mt-4">
-                            <span className="inline-block">topics </span>
-                            {/* Circular Icons */}
-                            <motion.span
-                                className="inline-flex items-center justify-center mx-3"
+                            </motion.div>
+                            <h1 className="text-4xl font-bold text-[#e8ded2] leading-tight">
+                                topics & content
+                            </h1>
+                            {/* Circular Icons - stacked on mobile */}
+                            <motion.div
+                                className="flex justify-center gap-4 mt-6"
                                 initial={{ scale: 0 }}
                                 animate={{ scale: 1 }}
                                 transition={{ duration: 0.6, delay: 0.5 }}
                             >
                                 <motion.span
-                                    className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full bg-[#f4e8a8] flex items-center justify-center border-4 border-[#e8ded2]"
+                                    className="w-16 h-16 rounded-full bg-[#f4e8a8] flex items-center justify-center border-4 border-[#e8ded2]"
                                     animate={{ rotate: [0, 5, -5, 0] }}
                                     transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
                                 >
-                                    <span className="text-3xl md:text-4xl lg:text-5xl font-black text-[#2a3a32]">&</span>
+                                    <span className="text-3xl font-black text-[#2a3a32]">&</span>
                                 </motion.span>
                                 <motion.span
-                                    className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full bg-[#4a8fff] flex items-center justify-center border-4 border-[#e8ded2] -ml-8"
+                                    className="w-16 h-16 rounded-full bg-[#4a8fff] flex items-center justify-center border-4 border-[#e8ded2]"
                                     animate={{ y: [0, -5, 5, 0] }}
                                     transition={{ duration: 2, repeat: Infinity, repeatDelay: 0.5 }}
                                 >
-                                    <svg className="w-8 h-8 md:w-10 md:h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z" />
                                     </svg>
                                 </motion.span>
-                            </motion.span>
-                            <span className="inline-block">content</span>
-                            {/* Circular Image 2 */}
-                            <motion.div
-                                className="z-50 top-50 absolute right-0"
-                                initial={{ opacity: 0, scale: 0, rotate: -180 }}
-                                animate={{ opacity: 1, scale: 1, rotate: 8 }}
-                                transition={{ duration: 1, delay: 1.4, type: "spring" }}
-                                id="floating-transition-card"
-                            >
-                                <motion.div
-                                    className="w-48 h-48 rounded-3xl overflow-hidden shadow-2xl border-4 border-white"
-                                    animate={{
-                                        y: [0, -10, 0],
-                                        rotate: [8, 6, 8],
-                                    }}
-                                    transition={{
-                                        duration: 4,
-                                        repeat: Infinity,
-                                        ease: "easeInOut"
-                                    }}
-                                    whileHover={{
-                                        scale: 1.05,
-                                        rotate: 0,
-                                        transition: { duration: 0.3 }
-                                    }}
+                            </motion.div>
+                        </div>
+
+                        {/* Desktop layout */}
+                        <div className="hidden md:block">
+                            <h1 className="text-5xl md:text-7xl xl:text-8xl font-bold text-[#e8ded2] leading-tight">
+                                <span className="inline-block">Find </span>
+                                {/* Circular Image 1 */}
+                                <motion.span
+                                    className="inline-block relative mx-4"
+                                    initial={{ scale: 0, rotate: -180 }}
+                                    animate={{ scale: 1, rotate: 0 }}
+                                    transition={{ duration: 0.8, delay: 0.3, type: "spring" }}
                                 >
-                                    <video
-                                        autoPlay
-                                        loop
-                                        muted
-                                        playsInline
-                                        className="w-full h-full object-cover"
+                                    <img
+                                        src="/arab-lady-1.jpg"
+                                        alt="Youth creativity"
+                                        className="w-24 h-24 md:w-32 md:h-32 xl:w-40 xl:h-40 rounded-full object-cover border-4 border-[#e8ded2] inline-block align-middle"
+                                    />
+                                </motion.span>
+                                <span className="inline-block">seminar</span>
+                            </h1>
+
+                            <h1 className="text-5xl md:text-7xl xl:text-8xl font-bold text-[#e8ded2] leading-tight mt-4">
+                                <span className="inline-block">topics </span>
+                                {/* Circular Icons */}
+                                <motion.span
+                                    className="inline-flex items-center justify-center mx-3"
+                                    initial={{ scale: 0 }}
+                                    animate={{ scale: 1 }}
+                                    transition={{ duration: 0.6, delay: 0.5 }}
+                                >
+                                    <motion.span
+                                        className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full bg-[#f4e8a8] flex items-center justify-center border-4 border-[#e8ded2]"
+                                        animate={{ rotate: [0, 5, -5, 0] }}
+                                        transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
                                     >
-                                        <source src="/sticky-note.mp4" type="video/mp4" />
-                                    </video>
-                                    <motion.div
-                                        className="absolute top-3 left-3 px-3 py-1 rounded-full text-white text-sm font-bold shadow-lg bg-[#f4e8a8]"
-                                        whileHover={{ scale: 1.1 }}
+                                        <span className="text-3xl md:text-4xl lg:text-5xl font-black text-[#2a3a32]">&</span>
+                                    </motion.span>
+                                    <motion.span
+                                        className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full bg-[#4a8fff] flex items-center justify-center border-4 border-[#e8ded2] -ml-8"
+                                        animate={{ y: [0, -5, 5, 0] }}
+                                        transition={{ duration: 2, repeat: Infinity, repeatDelay: 0.5 }}
                                     >
-                                        <span className="text-[#2a3a32]">Creative Space</span>
-                                    </motion.div>
+                                        <svg className="w-8 h-8 md:w-10 md:h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z" />
+                                        </svg>
+                                    </motion.span>
+                                </motion.span>
+                                <span className="inline-block">content</span>
+                            </h1>
+                        </div>
+
+                        {/* Floating Card - Hidden on mobile, repositioned on tablet */}
+                        <motion.div
+                            className="hidden lg:block z-50 top-50 absolute right-0"
+                            initial={{ opacity: 0, scale: 0, rotate: -180 }}
+                            animate={{ opacity: 1, scale: 1, rotate: 8 }}
+                            transition={{ duration: 1, delay: 1.4, type: "spring" }}
+                            id="floating-transition-card"
+                        >
+                            <motion.div
+                                className="w-40 h-40 lg:w-48 lg:h-48 rounded-3xl overflow-hidden shadow-2xl border-4 border-white"
+                                animate={{
+                                    y: [0, -10, 0],
+                                    rotate: [8, 6, 8],
+                                }}
+                                transition={{
+                                    duration: 4,
+                                    repeat: Infinity,
+                                    ease: "easeInOut"
+                                }}
+                                whileHover={{
+                                    scale: 1.05,
+                                    rotate: 0,
+                                    transition: { duration: 0.3 }
+                                }}
+                            >
+                                <video
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    className="w-full h-full object-cover"
+                                >
+                                    <source src="/sticky-note.mp4" type="video/mp4" />
+                                </video>
+                                <motion.div
+                                    className="absolute top-3 left-3 px-3 py-1 rounded-full text-white text-sm font-bold shadow-lg bg-[#f4e8a8]"
+                                    whileHover={{ scale: 1.1 }}
+                                >
+                                    <span className="text-[#2a3a32]">Creative Space</span>
                                 </motion.div>
                             </motion.div>
-                        </h1>
+                        </motion.div>
                     </motion.div>
 
                     {/* Subtitle */}
                     <motion.div
-                        className="text-[#e8ded2] text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-12 relative"
+                        className="text-[#e8ded2] text-base md:text-xl lg:text-2xl max-w-3xl mx-auto mb-12 relative px-4"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.8 }}

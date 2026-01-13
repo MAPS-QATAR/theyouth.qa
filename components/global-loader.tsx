@@ -71,7 +71,7 @@ export default function GlobalLoader() {
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-5xl md:text-7xl font-black text-[#e8ded2] mb-2">
-                Y.O.U.T.H.
+                The Youth.qa
               </h1>
               <motion.div
                 className="h-1 bg-[#f4e8a8] rounded-full mx-auto"

@@ -33,61 +33,50 @@ export default function Navbar() {
               transition={{ type: "spring", stiffness: 400 }}
             >
               <span className="relative inline-block">
-                Y.O.U.T.H.
-                <span className="relative inline-block">
-                  qa
-                  {/* Animated underline for .qa */}
-                  <motion.span
-                    className="absolute -bottom-1 left-0 right-0 h-1 bg-[#4a8fff] rounded-full"
-                    initial={{ scaleX: 0 }}
-                    animate={{ scaleX: 1 }}
-                    transition={{ duration: 0.8, delay: 0.5 }}
+                The Youth.qa
+                {/* Small star doodle */}
+                <motion.svg
+                  className="absolute -top-2 -right-3 w-4 h-4 text-[#f4e8a8]"
+                  viewBox="0 0 100 100"
+                  initial={{ scale: 0, rotate: -180 }}
+                  animate={{ scale: 1, rotate: 0 }}
+                  transition={{ duration: 0.6, delay: 0.8, type: "spring" }}
+                >
+                  <motion.path
+                    d="M 50 20 L 60 40 L 80 45 L 65 60 L 68 80 L 50 70 L 32 80 L 35 60 L 20 45 L 40 40 Z"
+                    fill="currentColor"
+                    animate={{ rotate: [0, 10, -10, 0] }}
+                    transition={{ duration: 3, repeat: Infinity }}
                   />
-                  
-                  {/* Small star doodle */}
-                  <motion.svg
-                    className="absolute -top-2 -right-3 w-4 h-4 text-[#f4e8a8]"
-                    viewBox="0 0 100 100"
-                    initial={{ scale: 0, rotate: -180 }}
-                    animate={{ scale: 1, rotate: 0 }}
-                    transition={{ duration: 0.6, delay: 0.8, type: "spring" }}
-                  >
-                    <motion.path
-                      d="M 50 20 L 60 40 L 80 45 L 65 60 L 68 80 L 50 70 L 32 80 L 35 60 L 20 45 L 40 40 Z"
-                      fill="currentColor"
-                      animate={{ rotate: [0, 10, -10, 0] }}
-                      transition={{ duration: 3, repeat: Infinity }}
-                    />
-                  </motion.svg>
+                </motion.svg>
 
-                  {/* Small circle doodle */}
-                  <motion.svg
-                    className="absolute -bottom-2 -left-2 w-3 h-3 text-[#5a8a6a]"
-                    viewBox="0 0 100 100"
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ duration: 0.5, delay: 1, type: "spring" }}
-                  >
-                    <circle cx="50" cy="50" r="40" fill="currentColor" />
-                  </motion.svg>
+                {/* Small circle doodle */}
+                <motion.svg
+                  className="absolute -bottom-2 -left-2 w-3 h-3 text-[#5a8a6a]"
+                  viewBox="0 0 100 100"
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.5, delay: 1, type: "spring" }}
+                >
+                  <circle cx="50" cy="50" r="40" fill="currentColor" />
+                </motion.svg>
 
-                  {/* Curved line doodle */}
-                  <motion.svg
-                    className="absolute -top-1 -left-4 w-5 h-5 text-[#4a8fff] opacity-60"
-                    viewBox="0 0 100 100"
-                    initial={{ pathLength: 0, opacity: 0 }}
-                    animate={{ pathLength: 1, opacity: 0.6 }}
-                    transition={{ duration: 1, delay: 0.9 }}
-                  >
-                    <motion.path
-                      d="M 10 50 Q 30 20, 50 50"
-                      stroke="currentColor"
-                      strokeWidth="8"
-                      fill="none"
-                      strokeLinecap="round"
-                    />
-                  </motion.svg>
-                </span>
+                {/* Curved line doodle */}
+                <motion.svg
+                  className="absolute -top-1 -left-4 w-5 h-5 text-[#4a8fff] opacity-60"
+                  viewBox="0 0 100 100"
+                  initial={{ pathLength: 0, opacity: 0 }}
+                  animate={{ pathLength: 1, opacity: 0.6 }}
+                  transition={{ duration: 1, delay: 0.9 }}
+                >
+                  <motion.path
+                    d="M 10 50 Q 30 20, 50 50"
+                    stroke="currentColor"
+                    strokeWidth="8"
+                    fill="none"
+                    strokeLinecap="round"
+                  />
+                </motion.svg>
               </span>
             </motion.div>
           </Link>

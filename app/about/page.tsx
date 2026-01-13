@@ -25,7 +25,7 @@ export default function AboutPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative bg-[#4a5a52] min-h-[60vh] flex items-center justify-center overflow-hidden px-6 py-20">
+      <section className="relative bg-[#4a5a52] min-h-[50vh] md:min-h-[60vh] flex items-center justify-center overflow-hidden px-4 md:px-6 py-16 md:py-20">
         <video
           autoPlay
           loop
@@ -43,16 +43,16 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
           >
             <motion.h1
-              className="text-6xl md:text-8xl font-black text-[#e8ded2] mb-6"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-[#e8ded2] mb-4 md:mb-6 px-2"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              About{" "}
+              <span className="block sm:inline">About </span>
               <span className="relative inline-block">
-                Y.O.U.T.H
+                The Youth.qa
                 <motion.div
-                  className="absolute -bottom-2 left-0 right-0 h-3 bg-[#f4e8a8]"
+                  className="absolute -bottom-1 md:-bottom-2 left-0 right-0 h-2 md:h-3 bg-[#f4e8a8]"
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
@@ -61,7 +61,7 @@ export default function AboutPage() {
             </motion.h1>
 
             <motion.p
-              className="text-2xl text-[#e8ded2]/90 font-medium"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#e8ded2]/90 font-medium px-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -70,9 +70,9 @@ export default function AboutPage() {
             </motion.p>
           </motion.div>
 
-          {/* Animated Doodles */}
+          {/* Animated Doodles - Hidden on mobile */}
           <motion.svg
-            className="absolute top-20 right-20 w-24 h-24 text-[#f4e8a8] opacity-40"
+            className="hidden lg:block absolute top-20 right-20 w-24 h-24 text-[#f4e8a8] opacity-40"
             viewBox="0 0 100 100"
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
@@ -100,7 +100,7 @@ export default function AboutPage() {
               A Transformative Youth Empowerment Project
             </h2>
             <p className="text-lg text-[#2a3a32]/80 leading-relaxed mb-6">
-              The Y.O.U.T.H is a transformative youth empowerment project dedicated to celebrating creativity, education, and expression. Organized by <strong>MAPS International W.L.L</strong> at <strong>Katara Cultural Village</strong>, this three-day mega event aims to empower and inspire young individuals through a collective series of creative and educational activities.
+              The Youth.qa is a transformative youth empowerment project dedicated to celebrating creativity, education, and expression. Organized by <strong>MAPS International W.L.L</strong> at <strong>Katara Cultural Village</strong>, this three-day mega event aims to empower and inspire young individuals through a collective series of creative and educational activities.
             </p>
           </motion.div>
 

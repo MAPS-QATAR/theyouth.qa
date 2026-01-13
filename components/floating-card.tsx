@@ -11,7 +11,7 @@ export default function FloatingCard() {
       transition={{ duration: 0.8, delay: 1.5 }}
       whileHover={{ scale: 1.05, rotate: 2 }}
     >
-      <div className="mb-4 font-black text-xl text-[#e8ded2]">Y.O.U.T.H.</div>
+      <div className="mb-4 font-black text-xl text-[#e8ded2]">The Youth.qa</div>
       
       <div className="space-y-3">
         <motion.div

@@ -414,7 +414,7 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            © {currentYear} The Y.O.U.T.H. Project. All rights reserved.
+            © {currentYear} The Youth.qa. All rights reserved.
           </motion.p>
         </div>
 

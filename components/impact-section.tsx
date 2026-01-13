@@ -13,7 +13,7 @@ const stats = [
 
 const testimonials = [
   {
-    quote: "The YOUTH project transformed my perspective on innovation. I learned to think bigger and act bolder.",
+    quote: "The Youth.qa project transformed my perspective on innovation. I learned to think bigger and act bolder.",
     author: "Amira K.",
     role: "Startup Founder",
     color: "#5a8a6a"

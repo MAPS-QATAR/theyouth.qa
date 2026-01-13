@@ -13,14 +13,14 @@ const dmSans = DM_Sans({
 })
 
 const siteUrl = "https://youth.qa"
-const siteName = "The Y.O.U.T.H Project"
+const siteName = "The Youth.qa"
 const siteDescription = "A transformative cultural festival celebrating creativity, education, and expression for youth aged 13-21. Join us October 23-25, 2025 at Katara Cultural Village, Qatar."
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "The Y.O.U.T.H Project - Embrace Your Youth, Create Your Legacy",
-    template: "%s | The Y.O.U.T.H Project",
+    default: "The Youth.qa - Embrace Your Youth, Create Your Legacy",
+    template: "%s | The Youth.qa",
   },
   description: siteDescription,
   keywords: [
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
         url: `${siteUrl}/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: "The Y.O.U.T.H Project - Embrace Your Youth, Create Your Legacy",
+        alt: "The Youth.qa - Embrace Your Youth, Create Your Legacy",
       },
       {
         url: `${siteUrl}/arab-lady-1.jpg`,
@@ -130,7 +130,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Event",
-              "name": "The Y.O.U.T.H Project",
+              "name": "The Youth.qa",
               "description": "A transformative cultural festival celebrating creativity, education, and expression for youth aged 13-21",
               "startDate": "2025-10-23",
               "endDate": "2025-10-25",

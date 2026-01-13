@@ -399,9 +399,9 @@ export default function FeaturesSection() {
 
             {/* Heading with highlight */}
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#2a3a32] mb-6 leading-tight">
-              <span className="inline-block">About The </span>
+              <span className="inline-block">About </span>
               <span className="relative inline-block">
-                <span className="relative z-10">Y.O.U.T.H.</span>
+                <span className="relative z-10">The Youth.qa</span>
                 <motion.span
                   className="absolute bottom-2 left-0 w-full h-4 bg-[#f4e8a8] -z-10"
                   initial={{ scaleX: 0 }}
@@ -419,7 +419,7 @@ export default function FeaturesSection() {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.7 }}
               >
-                The Y.O.U.T.H. (You Own Unlimited Talents and Hope) is a transformative youth empowerment project celebrating creativity, education, and expression. Join us at Katara Cultural Village for three days of innovative activities designed to inspire young individuals aged 13-21.
+                The Youth.qa (You Own Unlimited Talents and Hope) is a transformative youth empowerment project celebrating creativity, education, and expression. Join us at Katara Cultural Village for three days of innovative activities designed to inspire young individuals aged 13-21.
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}

@@ -1,4 +1,4 @@
-# robots.txt for The Y.O.U.T.H Project
+# robots.txt for The Youth.qa
 
 User-agent: *
 Allow: /

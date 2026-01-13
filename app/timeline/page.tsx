@@ -64,7 +64,7 @@ export default function TimelinePage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative bg-[#4a5a52] min-h-[60vh] flex items-center justify-center overflow-hidden px-6 py-20">
+      <section className="relative bg-[#4a5a52] min-h-[50vh] md:min-h-[60vh] flex items-center justify-center overflow-hidden px-4 md:px-6 py-16 md:py-20">
         <video
           autoPlay
           loop
@@ -77,27 +77,27 @@ export default function TimelinePage() {
 
         <div className="relative z-10 max-w-6xl mx-auto text-center">
           <motion.div
-            className="mb-8"
+            className="mb-6 md:mb-8"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, type: "spring" }}
           >
-            <div className="inline-block bg-[#f4e8a8] text-[#2a3a32] px-8 py-3 rounded-full font-bold text-lg">
+            <div className="inline-block bg-[#f4e8a8] text-[#2a3a32] px-6 md:px-8 py-2 md:py-3 rounded-full font-bold text-base md:text-lg">
               2023 - 2025
             </div>
           </motion.div>
 
           <motion.h1
-            className="text-6xl md:text-8xl font-black text-[#e8ded2] mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-[#e8ded2] mb-4 md:mb-6 px-2"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Project{" "}
+            <span className="block sm:inline">Project </span>
             <span className="relative inline-block">
               Timeline
               <motion.div
-                className="absolute -bottom-2 left-0 right-0 h-3 bg-[#5a8a6a]"
+                className="absolute -bottom-1 md:-bottom-2 left-0 right-0 h-2 md:h-3 bg-[#5a8a6a]"
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -106,7 +106,7 @@ export default function TimelinePage() {
           </motion.h1>
 
           <motion.p
-            className="text-2xl text-[#e8ded2]/90 max-w-3xl mx-auto"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#e8ded2]/90 max-w-3xl mx-auto px-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -114,9 +114,9 @@ export default function TimelinePage() {
             A multi-year initiative fostering leadership and innovation among today's youth
           </motion.p>
 
-          {/* Animated Timeline Connector */}
+          {/* Animated Timeline Connector - Hidden on mobile */}
           <motion.svg
-            className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-20 text-[#e8ded2]"
+            className="hidden md:block absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-20 text-[#e8ded2]"
             initial={{ scaleY: 0 }}
             animate={{ scaleY: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}

@@ -14,7 +14,7 @@ Ensure that the design is modern, clean, and visually appealing, using appropria
 
 
 ## Home Page
-The Y.O.U.T.H: Embrace Your Youth, Create Your Legacy
+The Youth.qa: Embrace Your Youth, Create Your Legacy
 Dates: 23rd - 25th October 2025
 Location: Katara Cultural Village, Qatar
 Organized by: MAPS International W.L.L in collaboration with Katara Cultural Village
@@ -32,8 +32,8 @@ Show the themes of the event
 Show a contact us section with a form for inquiries and registrations.
 
 ## About Page
-About The Y.O.U.T.H
-The Y.O.U.T.H (You Own Unlimited Talents and Hope) is a transformative youth empowerment project dedicated to celebrating creativity, education, and expression. Organized by MAPS International W.L.L at Katara Cultural Village, this three-day mega event aims to empower and inspire young individuals through a collective series of creative and educational activities.
+About The Youth.qa
+The Youth.qa (You Own Unlimited Talents and Hope) is a transformative youth empowerment project dedicated to celebrating creativity, education, and expression. Organized by MAPS International W.L.L at Katara Cultural Village, this three-day mega event aims to empower and inspire young individuals through a collective series of creative and educational activities.
 Event Overview
 
 Duration: 3 Days with an action-packed schedule and diverse engagement opportunities.
@@ -41,7 +41,7 @@ Focus: Fostering personal growth, encouraging innovation, and promoting sustaina
 Aim: Create a vibrant space that nurtures creativity, critical thinking, and social responsibility. Allow young individuals to connect with peers and mentors, showcase skills, learn from others, and build connections with like-minded people.
 
 Participants will include individuals, schools, universities, students, educators, and more, all coming together to display creativity and innovation under the given themes. With the participation of schools and universities, we aim to create a platform for youthful ambition and creativity to flourish with passion.
-We believe that fostering a culture of creativity and innovation today will benefit society for years to come. Who knows, the next great Millionaire/Entrepreneur could be discovered at The Y.O.U.T.H, providing a platform for young talent to shine and be recognized!!
+We believe that fostering a culture of creativity and innovation today will benefit society for years to come. Who knows, the next great Millionaire/Entrepreneur could be discovered at The Youth.qa, providing a platform for young talent to shine and be recognized!!
 Empowering Youth
 Empowering young individuals through innovation and creativity across various fields to foster leadership and cultural exchange. Empowering the next generation through creative expression and collaboration over three transformative days.
 Key themes:
@@ -59,7 +59,7 @@ This event empowers youth by offering a vibrant platform where they can showcase
 
 ## Target Audience Page
 Target Demographic
-The Y.O.U.T.H is designed for youth in the age range of 13-21 years. This target group includes:
+The Youth.qa is designed for youth in the age range of 13-21 years. This target group includes:
 
 Students from schools and universities
 Individual young creators and innovators
@@ -71,7 +71,7 @@ The event promotes sustainability, critical thinking, and social responsibility,
 Show themes for the target audience
 
 Art, Fashion, and Culture
-The Y.O.U.T.H celebrates creativity across key themes, providing opportunities for expression and collaboration.
+The Youth.qa celebrates creativity across key themes, providing opportunities for expression and collaboration.
 Key Activities and Themes
 
 Painting
