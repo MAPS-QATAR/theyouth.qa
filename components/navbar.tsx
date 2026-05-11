@@ -10,11 +10,12 @@ export default function Navbar() {
   const pathname = usePathname()
 
   const navItems = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Target Audience", path: "/target-audience" },
-   // { name: "Timeline", path: "/timeline" },
-  ]
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
+  { name: "JADO'o", path: "/jadoo" },
+  { name: "Target Audience", path: "/target-audience" },
+ // { name: "Timeline", path: "/timeline" },
+]
 
   return (
     <motion.nav
