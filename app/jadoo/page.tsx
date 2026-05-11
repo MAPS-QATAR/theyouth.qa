@@ -54,7 +54,7 @@ export default function JadooPage() {
           </p>
 
           <h2 className="mt-6 text-3xl md:text-5xl font-black">
-            Youth for SDG
+            Youth for SDGs
           </h2>
 
           <p className="mt-8 max-w-4xl mx-auto text-lg md:text-xl leading-relaxed text-[#405047]">
@@ -141,7 +141,7 @@ export default function JadooPage() {
             Transforming SDGs into Real Youth Action
           </h2>
           <p className="text-lg leading-relaxed text-white/85">
-            JADOO – Youth for SDG inspires students to become global
+            JADOO – Youth for SDGs inspires students to become global
             citizens, responsible leaders, innovators, and changemakers by
             transforming the Sustainable Development Goals into real-world
             experiences through art, design, innovation, culture, and
