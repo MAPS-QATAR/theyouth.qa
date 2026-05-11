@@ -120,7 +120,7 @@ export default function JadooPage() {
             ["Dates", "29, 30 & 31 October 2026"],
             ["Venue", "Katara Cultural Village"],
             ["Format", "Outdoor Public Youth SDG Showcase"],
-            ["Participation", "17 Schools Only"],
+            ["Participation", "Limited to 17 Schools"],
             ["Students", "Up to 50 Students per School"],
             ["Fee", "QAR 6,000 per School"],
           ].map(([title, detail]) => (
