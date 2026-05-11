@@ -32,7 +32,7 @@ export default function JadooPage() {
 
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
             <Link
-              href="https://register.theyouth.qa"
+              href="https://v0-jado-o-youth-registration.vercel.app"
               target="_blank"
             >
               <button className="px-8 py-4 rounded-full bg-[#2a3a32] text-white font-bold hover:scale-105 transition">
