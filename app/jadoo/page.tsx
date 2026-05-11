@@ -121,7 +121,10 @@ export default function JadooPage() {
             ["Venue", "Katara Cultural Village"],
             ["Format", "Outdoor Public Youth SDG Showcase"],
             ["Participation", "Limited to 17 Schools"],
-            ["Students", "Up to 50 Students per School"],
+            ["Students", "850 Students"
+            <span className="text-sm text-[#6b756f] block mt-2">
+Up to 50 students per school
+</span>],
             ["Fee", "QAR 6,000 per School"],
           ].map(([title, detail]) => (
             <div key={title} className="bg-white rounded-3xl p-8 shadow-sm">
