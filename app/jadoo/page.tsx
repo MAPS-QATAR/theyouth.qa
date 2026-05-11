@@ -123,7 +123,7 @@ export default function JadooPage() {
             ["Participation", "Limited to 17 Schools"],
             ["Students", "850 Students"]
             <span className="text-sm text-[#6b756f] block mt-2">
-Up to 50 students per school
+850 Students (50 students per school)
 </span>,
             ["Fee", "QAR 6,000 per School"]
              <span className="text-sm text-[#6b756f] block mt-2">
