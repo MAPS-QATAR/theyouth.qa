@@ -125,7 +125,10 @@ export default function JadooPage() {
             <span className="text-sm text-[#6b756f] block mt-2">
 Up to 50 students per school
 </span>],
-            ["Fee", "QAR 6,000 per School"],
+            ["Fee", "QAR 6,000 per School"
+             <span className="text-sm text-[#6b756f] block mt-2">
+(QAR 120 per student)
+</span>],
           ].map(([title, detail]) => (
             <div key={title} className="bg-white rounded-3xl p-8 shadow-sm">
               <p className="text-sm uppercase tracking-widest text-[#7a867f]">
