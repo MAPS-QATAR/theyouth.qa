@@ -78,11 +78,11 @@ export default function JadooPage() {
             MAPS International W.L.L.
           </p>
 
-          <h1 className="text-4xl md:text-7xl lg:text-8xl font-black leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-tight whitespace-nowrap">
             JADOO - YOUTH for SDGs
           </h1>
 
-          <p className="mt-4 italic text-xl md:text-2xl text-white/85">
+          <p className="mt-6 italic text-2xl md:text-3xl text-white/90">
             Junior Artists Day Out
           </p>
 
