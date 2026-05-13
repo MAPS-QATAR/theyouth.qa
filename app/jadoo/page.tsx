@@ -45,11 +45,12 @@ const counters = [
 ]
 
 export default function JadooPage() {
-  const [activeSdg, setActiveSdg] = useState<string | null>("01")
-  const [activeActivity, setActiveActivity] = useState<string | null>("Art")
+    const [activeSdg, setActiveSdg] = useState<string | null>("01");
+  const [activeActivity, setActiveActivity] = useState<string | null>("Art");
 
-    return (
-  <div className="min-h-screen bg-[#f5f1eb] text-[#24362f]">
+  return (
+    <>
+      <div className="min-h-screen bg-[#f5f1eb] text-[#24362f]">
     <section className="relative min-h-screen overflow-hidden px-6 pt-28 pb-16 flex items-center text-center text-white">
       <video
         autoPlay
@@ -350,6 +351,7 @@ export default function JadooPage() {
           © {new Date().getFullYear()} MAPS International W.L.L. All rights reserved.
         </p>
       </footer>
-    </div>
+          </div>
+    </>
   )
 }
