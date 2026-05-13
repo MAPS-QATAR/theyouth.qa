@@ -129,7 +129,7 @@ export default function JadooPage() {
       <section className="px-6 py-16">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-4">
           {counters.map(([number, label]) => (
-            <div key={label} className="bg-white rounded-3xl p-6 text-center shadow-sm hover:-translate-y-1 transition">
+            <div key={label} className="group bg-white/90 rounded-[2rem] p-7 text-center shadow-sm border border-white/70 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
               <div className="text-4xl md:text-5xl font-black">{number}</div>
               <div className="mt-2 text-sm uppercase tracking-widest text-[#6b756f]">{label}</div>
             </div>
@@ -145,11 +145,13 @@ export default function JadooPage() {
             ["Format", "Outdoor Public Youth SDGs Showcase", ""],
             ["Participation", "Limited to 17 Schools", ""],
             ["Students", "850 Students", "Up to 50 students per school"],
-            ["Fee", "QAR 6,000 per School", "(QAR 120 per student)"],
+            [["Fee", "QAR 120 per student", "(QAR 6,000 per School)"],
           ].map(([title, detail, sub]) => (
-            <div key={title} className="bg-white rounded-3xl p-8 shadow-sm">
-              <p className="text-sm uppercase tracking-widest text-[#7a867f]">{title}</p>
-              <h3 className="mt-3 text-2xl font-black">{detail}</h3>
+            <div key={title} className="group bg-white/95 rounded-[2rem] p-8 md:p-10 shadow-sm border border-white/70 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+              <p className="text-sm uppercase tracking-[0.22em] text-[#7a867f] group-hover:text-[#24362f] transition">
+  {title}
+</p>
+              <h3 className="mt-4 text-2xl md:text-3xl font-black leading-snug">{detail}</h3>
               {sub && <p className="mt-2 text-sm text-[#6b756f]">{sub}</p>}
             </div>
           ))}
