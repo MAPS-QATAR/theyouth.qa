@@ -49,16 +49,16 @@ export default function JadooPage() {
   const [activeActivity, setActiveActivity] = useState<string | null>("Art")
 
   return (
-    <main className="min-h-screen bg-[#f5f1eb] text-[#24362f]">
+  <main className="min-h-screen bg-[#f5f1eb] text-[#24362f]">
 
-      <section className="relative min-h-screen overflow-hidden px-6 pt-28 pb-16 flex items-center text-center text-white">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 h-full w-full object-cover"
-        >
+    <section className="relative min-h-screen overflow-hidden px-6 pt-28 pb-16 flex items-center text-center text-white">
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 h-full w-full object-cover"
+      >
           <source src="/videos/sdg-hero.mp4" type="video/mp4" />
         </video>
 
