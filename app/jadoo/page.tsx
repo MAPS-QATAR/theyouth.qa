@@ -49,51 +49,84 @@ export default function JadooPage() {
   const [activeActivity, setActiveActivity] = useState<string | null>("Art")
 
   return (
-    <main className="min-h-screen bg-[#f5f1eb] text-[#24362f] pt-28">
+    <main className="min-h-screen bg-[#f5f1eb] text-[#24362f]">
 
-      <section className="px-6 py-16 text-center">
-        <img src="/youth-logo.jpeg" alt="The Y.O.U.T.H. Logo" className="mx-auto mb-8 h-28 w-28 object-contain rounded-2xl shadow-md" />
+      <section className="relative min-h-screen overflow-hidden px-6 pt-28 pb-16 flex items-center text-center text-white">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source src="/videos/sdg-hero.mp4" type="video/mp4" />
+        </video>
 
-        <p className="uppercase tracking-[0.35em] text-xs md:text-sm text-[#6b756f] mb-5">
-          MAPS International W.L.L.
-        </p>
+        <div className="absolute inset-0 bg-black/65" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-[#123b4d]/45 to-[#24362f]/90" />
+        <div className="absolute -top-32 -left-32 h-80 w-80 rounded-full bg-[#26BDE2]/25 blur-3xl" />
+        <div className="absolute bottom-10 right-0 h-96 w-96 rounded-full bg-[#DD1367]/20 blur-3xl" />
 
-        <h1 className="text-6xl md:text-8xl font-black leading-none">JADOO</h1>
+        <div className="relative z-10 mx-auto max-w-6xl">
+          <img
+            src="/youth-logo.jpeg"
+            alt="The Y.O.U.T.H. Logo"
+            className="mx-auto mb-8 h-24 w-24 object-contain rounded-2xl shadow-2xl"
+          />
 
-        <p className="mt-4 italic text-xl md:text-2xl text-[#56655d]">
-          Junior Artists Day Out
-        </p>
+          <p className="uppercase tracking-[0.35em] text-xs md:text-sm text-white/75 mb-5">
+            MAPS International W.L.L.
+          </p>
 
-        <h2 className="mt-6 text-3xl md:text-5xl font-black">Youth for SDGs</h2>
+          <h1 className="text-4xl md:text-7xl lg:text-8xl font-black leading-tight">
+            JADOO - YOUTH for SDGs
+          </h1>
 
-        <p className="mt-8 max-w-4xl mx-auto text-lg md:text-xl leading-relaxed text-[#405047]">
-          A youth engagement initiative bringing together schools across Qatar through creativity,
-          innovation, sustainability, leadership, collaboration, and experiential learning aligned
-          with the United Nations Sustainable Development Goals.
-        </p>
+          <p className="mt-4 italic text-xl md:text-2xl text-white/85">
+            Junior Artists Day Out
+          </p>
 
-        <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <Link href="https://register.theyouth.qa" target="_blank">
-            <button className="px-8 py-4 rounded-full bg-[#24362f] text-white font-bold shadow-lg hover:scale-105 transition">
-              Register School
-            </button>
-          </Link>
+          <p className="mt-8 max-w-4xl mx-auto text-lg md:text-xl leading-relaxed text-white/85">
+            A youth engagement initiative bringing together schools across Qatar through creativity,
+            innovation, sustainability, leadership, collaboration, and experiential learning aligned
+            with the United Nations Sustainable Development Goals.
+          </p>
 
-          <Link href="/documents/jadoo-guidelines.pdf" target="_blank">
-            <button className="px-8 py-4 rounded-full border-2 border-[#24362f] font-bold hover:bg-[#24362f] hover:text-white transition">
-              Download Guidelines
-            </button>
-          </Link>
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <Link href="https://register.theyouth.qa" target="_blank">
+              <button className="px-8 py-4 rounded-full bg-white text-[#24362f] font-bold shadow-lg hover:scale-105 transition">
+                Register School
+              </button>
+            </Link>
 
-          <Link href="/documents/jadoo-faq.pdf" target="_blank">
-            <button className="px-8 py-4 rounded-full border-2 border-[#24362f] font-bold hover:bg-[#24362f] hover:text-white transition">
-              Download FAQ
-            </button>
-          </Link>
+            <Link href="/documents/jadoo-guidelines.pdf" target="_blank">
+              <button className="px-8 py-4 rounded-full border-2 border-white text-white font-bold hover:bg-white hover:text-[#24362f] transition">
+                Download Guidelines
+              </button>
+            </Link>
+
+            <Link href="/documents/jadoo-faq.pdf" target="_blank">
+              <button className="px-8 py-4 rounded-full border-2 border-white text-white font-bold hover:bg-white hover:text-[#24362f] transition">
+                Download FAQ
+              </button>
+            </Link>
+          </div>
+
+          <p className="mt-10 text-xs text-white/55">
+            Visual source: United Nations Sustainable Development Goals —{" "}
+            <a
+              href="https://sdgs.un.org/"
+              target="_blank"
+              rel="noreferrer"
+              className="underline hover:text-white"
+            >
+              sdgs.un.org
+            </a>
+          </p>
         </div>
       </section>
 
-      <section className="px-6 pb-16">
+      <section className="px-6 py-16">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-4">
           {counters.map(([number, label]) => (
             <div key={label} className="bg-white rounded-3xl p-6 text-center shadow-sm hover:-translate-y-1 transition">
@@ -177,26 +210,6 @@ export default function JadooPage() {
 
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-black text-center mb-4">Why Participate?</h2>
-          <p className="text-center text-[#5b6b63] max-w-3xl mx-auto mb-12">
-            JADOO gives students a platform to learn, create, lead, collaborate, and present SDG-driven ideas to the public.
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {["Leadership", "Creativity", "Sustainability", "Innovation", "Collaboration", "Recognition"].map((item) => (
-              <div key={item} className="bg-white rounded-3xl p-8 shadow-sm hover:-translate-y-1 transition">
-                <h3 className="text-2xl font-black">{item}</h3>
-                <p className="mt-3 text-[#5b6b63]">
-                  Empowering youth through meaningful participation, public engagement, and SDG-aligned learning.
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-6 pb-20">
-        <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-black text-center mb-4">
             10 Creative Activity Categories
           </h2>
@@ -237,10 +250,30 @@ export default function JadooPage() {
 
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-black text-center mb-4">Why Participate?</h2>
+          <p className="text-center text-[#5b6b63] max-w-3xl mx-auto mb-12">
+            JADOO gives students a platform to learn, create, lead, collaborate, and present SDG-driven ideas to the public.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {["Leadership", "Creativity", "Sustainability", "Innovation", "Collaboration", "Recognition"].map((item) => (
+              <div key={item} className="bg-white rounded-3xl p-8 shadow-sm hover:-translate-y-1 transition">
+                <h3 className="text-2xl font-black">{item}</h3>
+                <p className="mt-3 text-[#5b6b63]">
+                  Empowering youth through meaningful participation, public engagement, and SDG-aligned learning.
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 pb-20">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-black text-center mb-12">Registration Timeline</h2>
 
           <div className="grid md:grid-cols-5 gap-4">
-            {["Register School", "Select 3 SDG Preferences", "Organizer Review", "SDG Allocation", "Payment & Student Details"].map((step, index) => (
+            {["Register School", "Select your SDG Goal preference", "Organizer Review", "SDG Allocation", "Payment & Student Details"].map((step, index) => (
               <div key={step} className="bg-white rounded-3xl p-6 shadow-sm">
                 <div className="w-12 h-12 rounded-full bg-[#24362f] text-white flex items-center justify-center font-black mb-5">
                   {index + 1}
