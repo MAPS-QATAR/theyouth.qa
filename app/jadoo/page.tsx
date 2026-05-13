@@ -145,7 +145,7 @@ export default function JadooPage() {
             ["Format", "Outdoor Public Youth SDGs Showcase", ""],
             ["Participation", "Limited to 17 Schools", ""],
             ["Students", "850 Students", "Up to 50 students per school"],
-            [["Fee", "QAR 120 per student", "(QAR 6,000 per School)"],
+            ["Fee", "QAR 120 per student", "(QAR 6,000 per School)"],
           ].map(([title, detail, sub]) => (
             <div key={title} className="group bg-white/95 rounded-[2rem] p-8 md:p-10 shadow-sm border border-white/70 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
               <p className="text-sm uppercase tracking-[0.22em] text-[#7a867f] group-hover:text-[#24362f] transition">
