@@ -51,7 +51,7 @@ export default function JadooPage() {
   return (
     <>
       <div className="min-h-screen bg-[#f5f1eb] text-[#24362f]">
-    <section className="relative min-h-screen overflow-hidden px-6 pt-28 pb-16 flex items-center text-center text-white">
+    <section className="relative min-h-screen overflow-hidden px-6 pt-20 pb-16 flex items-center text-center text-white cursor-default">
       <video
         autoPlay
         muted
@@ -74,39 +74,52 @@ export default function JadooPage() {
             className="mx-auto mb-8 h-24 w-24 object-contain rounded-2xl shadow-2xl"
           />
 
-          <p className="uppercase tracking-[0.35em] text-xs md:text-sm text-white/75 mb-5">
-            MAPS International W.L.L.
-          </p>
+          <img
+  src="/jadoo-logo.png"
+  alt="JADOO Youth for SDGs Logo"
+  className="mx-auto mt-2 mb-2 w-full max-w-md md:max-w-lg object-contain drop-shadow-2xl"
+/>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-tight whitespace-nowrap">
-            JADOO - YOUTH for SDGs
-          </h1>
+<h1 className="text-3xl md:text-5xl lg:text-6xl font-black leading-tight text-white">
+  JADOO (Junior Artists Days Out)
+</h1>
 
-          <p className="mt-6 italic text-2xl md:text-3xl text-white/90">
-            Junior Artists Day Out
-          </p>
+<p className="mt-2 text-2xl md:text-4xl font-bold text-white/95">
+  — Youth for SDGs Initiative
+</p>
 
-          <p className="mt-8 max-w-4xl mx-auto text-lg md:text-xl leading-relaxed text-white/85">
-            A youth engagement initiative bringing together schools across Qatar through creativity,
-            innovation, sustainability, leadership, collaboration, and experiential learning aligned
-            with the United Nations Sustainable Development Goals.
-          </p>
+<div className="mt-5 text-sm md:text-base text-white/75">
+  <p>An Initiative by</p>
+  <p className="font-bold tracking-wide">
+    MAPS INTERNATIONAL W.L.L.
+  </p>
+</div>
+
+<p className="mt-8 max-w-4xl mx-auto text-lg md:text-2xl leading-relaxed text-white/90">
+  Empowering young minds to engage with the Sustainable Development Goals
+  through creativity, innovation, and action. A global initiative where
+  creativity meets purpose, and youth drive sustainable change.
+</p>
+
+<p className="mt-6 text-xl md:text-2xl italic font-medium text-pink-200">
+  “The Y.O.U.T.H™ – You Own Unlimited Talents & Hope”
+</p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link href="https://register.theyouth.qa" target="_blank">
-              <button className="px-8 py-4 rounded-full bg-white text-[#24362f] font-bold shadow-lg hover:scale-105 transition">
+              <button className="px-8 py-4 rounded-full bg-pink-500 hover:bg-pink-600 text-white font-bold shadow-lg hover:scale-105 transition">
                 Register School
               </button>
             </Link>
 
             <Link href="/documents/jadoo-guidelines.pdf" target="_blank">
-              <button className="px-8 py-4 rounded-full border-2 border-white text-white font-bold hover:bg-white hover:text-[#24362f] transition">
+              <button className="px-8 py-4 rounded-full bg-green-500 hover:bg-green-600 text-white font-bold shadow-lg hover:scale-105 transition">
                 Download Guidelines
               </button>
             </Link>
 
             <Link href="/documents/jadoo-faq.pdf" target="_blank">
-              <button className="px-8 py-4 rounded-full border-2 border-white text-white font-bold hover:bg-white hover:text-[#24362f] transition">
+              <button className="px-8 py-4 rounded-full bg-blue-500 hover:bg-blue-600 text-white font-bold shadow-lg hover:scale-105 transition">
                 Download FAQ
               </button>
             </Link>
