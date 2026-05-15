@@ -51,13 +51,13 @@ export default function JadooPage() {
   return (
     <>
       <div className="min-h-screen bg-[#f5f1eb] text-[#24362f]">
-    <section className="relative min-h-[92vh] overflow-hidden px-6 pt-16 pb-14 flex items-center text-center text-white cursor-default">
+    <section className="relative overflow-hidden px-6 py-14 md:py-16 text-center text-white cursor-default">
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 h-full w-full object-cover scale-105 opacity-80"
+        className="absolute inset-0 h-full w-full object-cover object-center opacity-70"
       >
           <source src="/videos/sdg-hero.mp4" type="video/mp4" />
         </video>
@@ -71,13 +71,13 @@ export default function JadooPage() {
           <img
             src="/youth-logo.jpeg"
             alt="The Y.O.U.T.H. Logo"
-            className="mx-auto mb-8 h-24 w-24 object-contain rounded-2xl shadow-2xl"
+            className="mx-auto mb-4 h-20 w-20 md:h-24 md:w-24 object-contain rounded-2xl shadow-2xl"
           />
 
           <img
   src="/jadoo-logo.png"
   alt="JADOO Youth for SDGs Logo"
-  className="mx-auto mt-1 mb-1 w-full max-w-[260px] md:max-w-[360px] lg:max-w-[430px] object-contain drop-shadow-2xl"
+  className="mx-auto my-0 w-full max-w-[220px] md:max-w-[300px] lg:max-w-[340px] object-contain drop-shadow-2xl"
 />
 
 <h1 className="text-3xl md:text-4xl lg:text-5xl font-black leading-tight text-white">
@@ -107,19 +107,19 @@ export default function JadooPage() {
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link href="https://register.theyouth.qa" target="_blank">
-              <button className="px-8 py-4 rounded-full bg-pink-500 hover:bg-pink-600 text-white font-bold shadow-lg hover:scale-105 transition">
+              <button className="px-8 py-4 rounded-full bg-[#DD1367] hover:bg-[#c0105c] text-white font-bold shadow-lg hover:scale-105 transition">
                 Register School
               </button>
             </Link>
 
             <Link href="/documents/jadoo-guidelines.pdf" target="_blank">
-              <button className="px-8 py-4 rounded-full bg-green-500 hover:bg-green-600 text-white font-bold shadow-lg hover:scale-105 transition">
+              <button className="px-8 py-4 rounded-full bg-[#3F7E44] hover:bg-[#34683a] text-white font-bold shadow-lg hover:scale-105 transition">
                 Download Guidelines
               </button>
             </Link>
 
             <Link href="/documents/jadoo-faq.pdf" target="_blank">
-              <button className="px-8 py-4 rounded-full bg-blue-500 hover:bg-blue-600 text-white font-bold shadow-lg hover:scale-105 transition">
+              <button className="px-8 py-4 rounded-full bg-[#0A97D9] hover:bg-[#087bb0] text-white font-bold shadow-lg hover:scale-105 transition">
                 Download FAQ
               </button>
             </Link>
