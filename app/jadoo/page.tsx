@@ -80,7 +80,7 @@ export default function JadooPage() {
   className="mx-auto mt-1 mb-1 w-full max-w-[260px] md:max-w-[360px] lg:max-w-[430px] object-contain drop-shadow-2xl"
 />
 
-<h1 className="text-3xl md:text-4xl lg:text-5xl font-black leading-tight text-white"
+<h1 className="text-3xl md:text-4xl lg:text-5xl font-black leading-tight text-white">
   JADOO (Junior Artists Days Out)
 </h1>
 
