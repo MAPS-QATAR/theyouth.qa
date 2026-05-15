@@ -51,19 +51,19 @@ export default function JadooPage() {
   return (
     <>
       <div className="min-h-screen bg-[#f5f1eb] text-[#24362f]">
-    <section className="relative min-h-screen overflow-hidden px-6 pt-20 pb-16 flex items-center text-center text-white cursor-default">
+    <section className="relative min-h-[92vh] overflow-hidden px-6 pt-16 pb-14 flex items-center text-center text-white cursor-default">
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover scale-105 opacity-80"
       >
           <source src="/videos/sdg-hero.mp4" type="video/mp4" />
         </video>
 
-        <div className="absolute inset-0 bg-black/65" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-[#123b4d]/45 to-[#24362f]/90" />
+        <div className="absolute inset-0 bg-black/70" />
+<div className="absolute inset-0 bg-gradient-to-b from-black/75 via-[#123b4d]/55 to-[#1b2421]/95" />
         <div className="absolute -top-32 -left-32 h-80 w-80 rounded-full bg-[#26BDE2]/25 blur-3xl" />
         <div className="absolute bottom-10 right-0 h-96 w-96 rounded-full bg-[#DD1367]/20 blur-3xl" />
 
@@ -77,10 +77,10 @@ export default function JadooPage() {
           <img
   src="/jadoo-logo.png"
   alt="JADOO Youth for SDGs Logo"
-  className="mx-auto mt-2 mb-2 w-full max-w-md md:max-w-lg object-contain drop-shadow-2xl"
+  className="mx-auto mt-1 mb-1 w-full max-w-[260px] md:max-w-[360px] lg:max-w-[430px] object-contain drop-shadow-2xl"
 />
 
-<h1 className="text-3xl md:text-5xl lg:text-6xl font-black leading-tight text-white">
+<h1 className="text-3xl md:text-4xl lg:text-5xl font-black leading-tight text-white"
   JADOO (Junior Artists Days Out)
 </h1>
 
