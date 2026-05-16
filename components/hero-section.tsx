@@ -79,7 +79,7 @@ export default function HeroSection() {
             </div>
 
             <motion.div
-              className="absolute -left-10 top-16 rounded-[2rem] bg-[#ffe7a3] px-7 py-6 text-[#1e2f28] shadow-2xl"
+              className="absolute -left-10 top-2 rounded-[2rem] bg-[#ffe7a3] px-7 py-6 text-[#1e2f28] shadow-2xl"
               animate={{ y: [0, -12, 0] }}
               transition={{ duration: 4, repeat: Infinity }}
             >
