@@ -65,9 +65,11 @@ export default function FeaturesSection() {
             About the platform
           </p>
 
-          <h2 className="mt-6 text-4xl font-black leading-tight text-[#1e2f28] md:text-6xl">
-            THE Y.O.U.T.H™ is where talent becomes purpose.
-          </h2>
+          <h2 className="mt-6 max-w-4xl text-4xl font-black leading-[1.05] text-[#1e2f28] md:text-5xl lg:text-6xl">
+  THE Y.O.U.T.H™ is where
+  <br />
+  talent becomes purpose.
+</h2>
 
           <div className="mt-8 space-y-5 text-lg leading-relaxed text-[#44554d]">
             <p>
