@@ -7,29 +7,27 @@ export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[#10251f] text-white">
       <section className="relative px-6 py-20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_25%,rgba(255,122,24,0.18),transparent_28%),radial-gradient(circle_at_85%_20%,rgba(10,151,217,0.18),transparent_28%),radial-gradient(circle_at_50%_90%,rgba(221,19,103,0.14),transparent_30%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_25%,rgba(255,122,24,0.2),transparent_28%),radial-gradient(circle_at_85%_20%,rgba(10,151,217,0.18),transparent_28%),radial-gradient(circle_at_50%_90%,rgba(221,19,103,0.14),transparent_30%)]" />
 
         <div className="relative z-10 max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 items-start">
+          <div className="grid lg:grid-cols-[1fr_0.9fr] gap-12 items-start">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <img
-                src="/youth-wordmark.png"
-                alt="Y.O.U.T.H."
-                className="h-16 md:h-20 w-auto object-contain bg-white/90 rounded-2xl p-2"
-              />
+              <p className="inline-flex rounded-full bg-white/10 px-5 py-2 text-xs font-black uppercase tracking-[0.24em] text-[#ffe7a3]">
+                THE Y.O.U.T.H™
+              </p>
 
-              <h2 className="mt-8 text-4xl md:text-6xl font-black leading-tight">
-                Building a generation of creators, leaders, and changemakers.
+              <h2 className="mt-8 text-4xl md:text-5xl font-black leading-tight max-w-3xl">
+                Building creators, leaders, innovators, and changemakers.
               </h2>
 
               <p className="mt-6 max-w-2xl text-white/72 text-lg leading-relaxed">
                 Y.O.U.T.H. – You Own Unlimited Talent & Hope is a youth-focused platform
-                by MAPS International W.L.L., designed to inspire creativity, confidence,
+                by MAPS International W.L.L., created to inspire creativity, confidence,
                 collaboration, innovation, and purpose-driven action.
               </p>
 
@@ -49,7 +47,7 @@ export default function Footer() {
             </motion.div>
 
             <motion.div
-              className="grid sm:grid-cols-2 gap-8"
+              className="grid sm:grid-cols-2 gap-6"
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -70,7 +68,10 @@ export default function Footer() {
                 <p className="mt-5 text-white/72 leading-relaxed">
                   For collaborations, school engagement, partnerships, and youth initiatives:
                 </p>
-                <Link href="mailto:info@mapsinternational.net" className="mt-4 block font-bold text-[#ffe7a3]">
+                <Link
+                  href="mailto:info@mapsinternational.net"
+                  className="mt-4 block break-words text-base font-black text-[#ffe7a3] md:text-lg"
+                >
                   info@mapsinternational.net
                 </Link>
               </div>
