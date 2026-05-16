@@ -72,7 +72,7 @@ export default function HeroSection() {
           >
             <div className="relative mx-auto h-[560px] w-[460px] rounded-[3rem] overflow-hidden shadow-2xl border-[10px] border-white bg-white">
               <img
-                src="/Y.O.U.T.H.jpeg"
+                src="/Y.O.U.T.H..jpeg"
                 alt="Y.O.U.T.H. Youth Vision"
                 className="h-full w-full object-cover"
               />
