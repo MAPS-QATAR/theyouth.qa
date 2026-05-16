@@ -4,75 +4,74 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated color scheme for youth-focused cultural festival */
-  --background: #ffffff;
-  --foreground: #475569;
-  --card: #f1f5f9;
-  --card-foreground: #475569;
+  --background: #fff8ee;
+  --foreground: #24362f;
+  --card: #ffffff;
+  --card-foreground: #24362f;
   --popover: #ffffff;
-  --popover-foreground: #475569;
-  --primary: #059669;
+  --popover-foreground: #24362f;
+  --primary: #1f342c;
   --primary-foreground: #ffffff;
-  --secondary: #10b981;
+  --secondary: #ff7a18;
   --secondary-foreground: #ffffff;
-  --muted: #f1f5f9;
-  --muted-foreground: #475569;
-  --accent: #10b981;
+  --muted: #f3eadf;
+  --muted-foreground: #647067;
+  --accent: #dd1367;
   --accent-foreground: #ffffff;
-  --destructive: #ff4d4d;
+  --destructive: #e5243b;
   --destructive-foreground: #ffffff;
-  --border: #e0e0e0;
-  --input: #f1f5f9;
-  --ring: rgba(5, 150, 105, 0.5);
-  --chart-1: #059669;
-  --chart-2: #10b981;
-  --chart-3: #d97706;
-  --chart-4: #15803d;
-  --chart-5: #f97316;
-  --radius: 0.5rem;
-  --sidebar: #f1f5f9;
-  --sidebar-foreground: #475569;
-  --sidebar-primary: #059669;
+  --border: #eadfce;
+  --input: #ffffff;
+  --ring: rgba(31, 52, 44, 0.35);
+  --chart-1: #ff7a18;
+  --chart-2: #dd1367;
+  --chart-3: #0a97d9;
+  --chart-4: #3f7e44;
+  --chart-5: #fcc30b;
+  --radius: 1rem;
+  --sidebar: #fff8ee;
+  --sidebar-foreground: #24362f;
+  --sidebar-primary: #1f342c;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #10b981;
+  --sidebar-accent: #ff7a18;
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #e0e0e0;
-  --sidebar-ring: rgba(5, 150, 105, 0.5);
+  --sidebar-border: #eadfce;
+  --sidebar-ring: rgba(31, 52, 44, 0.35);
 }
 
 .dark {
-  --background: #0f172a;
-  --foreground: #f1f5f9;
-  --card: #1e293b;
-  --card-foreground: #f1f5f9;
-  --popover: #1e293b;
-  --popover-foreground: #f1f5f9;
-  --primary: #10b981;
-  --primary-foreground: #ffffff;
-  --secondary: #059669;
+  --background: #10251f;
+  --foreground: #fff8ee;
+  --card: #18342c;
+  --card-foreground: #fff8ee;
+  --popover: #18342c;
+  --popover-foreground: #fff8ee;
+  --primary: #ffe7a3;
+  --primary-foreground: #10251f;
+  --secondary: #ff7a18;
   --secondary-foreground: #ffffff;
-  --muted: #1e293b;
-  --muted-foreground: #94a3b8;
-  --accent: #10b981;
+  --muted: #1f342c;
+  --muted-foreground: #cfc6b8;
+  --accent: #dd1367;
   --accent-foreground: #ffffff;
-  --destructive: #ff4d4d;
+  --destructive: #e5243b;
   --destructive-foreground: #ffffff;
-  --border: #334155;
-  --input: #1e293b;
-  --ring: rgba(16, 185, 129, 0.5);
-  --chart-1: #10b981;
-  --chart-2: #059669;
-  --chart-3: #f59e0b;
-  --chart-4: #22c55e;
-  --chart-5: #fb923c;
-  --sidebar: #1e293b;
-  --sidebar-foreground: #f1f5f9;
-  --sidebar-primary: #10b981;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #059669;
+  --border: #2d4a40;
+  --input: #1f342c;
+  --ring: rgba(255, 231, 163, 0.35);
+  --chart-1: #ff7a18;
+  --chart-2: #dd1367;
+  --chart-3: #0a97d9;
+  --chart-4: #56c02b;
+  --chart-5: #fcc30b;
+  --sidebar: #10251f;
+  --sidebar-foreground: #fff8ee;
+  --sidebar-primary: #ffe7a3;
+  --sidebar-primary-foreground: #10251f;
+  --sidebar-accent: #ff7a18;
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #334155;
-  --sidebar-ring: rgba(16, 185, 129, 0.5);
+  --sidebar-border: #2d4a40;
+  --sidebar-ring: rgba(255, 231, 163, 0.35);
 }
 
 @theme inline {
@@ -102,10 +101,10 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 6px);
+  --radius-md: calc(var(--radius) - 4px);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 8px);
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -119,21 +118,26 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    cursor: auto !important;;
-  }
-  body {
-    @apply bg-background text-foreground;
-    cursor: auto !important;;
+    cursor: auto !important;
   }
 
-  /* Added smooth scrolling for better UX */
   html {
     scroll-behavior: smooth;
-    cursor: auto !important;;
+    cursor: auto !important;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    cursor: auto !important;
+  }
+
+  a,
+  button,
+  [role="button"] {
+    cursor: pointer !important;
   }
 }
 
-/* Added custom animations for engaging interactions */
 @keyframes float {
   0%,
   100% {
@@ -158,7 +162,7 @@
 @keyframes scaleIn {
   from {
     opacity: 0;
-    transform: scale(0.9);
+    transform: scale(0.94);
   }
   to {
     opacity: 1;
