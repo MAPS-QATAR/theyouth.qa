@@ -54,12 +54,12 @@ const infoCards = [
 ]
 
 const whyCards = [
-  ["Leadership", "#19486A", "from-[#19486A]/15 to-[#00689D]/15"],
-  ["Creativity", "#DD1367", "from-[#DD1367]/15 to-[#E5243B]/15"],
-  ["Sustainability", "#3F7E44", "from-[#3F7E44]/15 to-[#56C02B]/15"],
-  ["Innovation", "#FD6925", "from-[#FD6925]/15 to-[#FCC30B]/20"],
-  ["Collaboration", "#0A97D9", "from-[#0A97D9]/15 to-[#26BDE2]/15"],
-  ["Recognition", "#A21942", "from-[#A21942]/15 to-[#DD1367]/15"],
+  ["Leadership", "#00689D", "from-[#26BDE2]/35 via-[#0A97D9]/20 to-white"],
+  ["Creativity", "#DD1367", "from-[#DD1367]/30 via-[#FF3A21]/18 to-white"],
+  ["Sustainability", "#3F7E44", "from-[#56C02B]/35 via-[#4C9F38]/20 to-white"],
+  ["Innovation", "#FD6925", "from-[#FCC30B]/35 via-[#FD6925]/22 to-white"],
+  ["Collaboration", "#0A97D9", "from-[#26BDE2]/35 via-[#0A97D9]/20 to-white"],
+  ["Recognition", "#A21942", "from-[#DD1367]/30 via-[#A21942]/18 to-white"],
 ]
 
 const timelineSteps = [
@@ -342,12 +342,14 @@ export default function JadooPage() {
         </section>
 
         <footer className="bg-[#24362f] text-white px-6 py-10 text-center">
-          <p className="font-black text-xl">JADOO – Youth for SDGs</p>
-          <p className="mt-2 text-white/70">Organized by MAPS International W.L.L.</p>
-          <p className="mt-4 text-sm text-white/60">
-            © {new Date().getFullYear()} MAPS International W.L.L. All rights reserved.
-          </p>
-        </footer>
+  <p className="font-black text-xl">JADOO – Youth for SDGs</p>
+  <p className="mt-2 text-white/70">
+    Organized by theyouth.qa | An Initiate by MAPS International W.L.L.
+  </p>
+  <p className="mt-4 text-sm text-white/60">
+    © 2026 MAPS International W.L.L. All rights reserved.
+  </p>
+</footer>
       </div>
     </>
   )
