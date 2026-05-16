@@ -8,13 +8,13 @@ export default function HeroSection() {
     <section className="relative min-h-screen overflow-hidden bg-[#fff3df] pt-28">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(255,122,24,0.35),transparent_28%),radial-gradient(circle_at_82%_22%,rgba(255,214,64,0.35),transparent_30%),radial-gradient(circle_at_55%_85%,rgba(221,19,103,0.18),transparent_32%)]" />
 
-      <div className="absolute inset-0 opacity-40">
-        <video autoPlay loop muted playsInline className="h-full w-full object-cover">
-          <source src="/ai-tech.mp4" type="video/mp4" />
-        </video>
-      </div>
+            <div className="absolute inset-0 opacity-75">
+  <video autoPlay loop muted playsInline className="h-full w-full object-cover">
+    <source src="/ai-tech.mp4" type="video/mp4" />
+  </video>
+</div>
 
-      <div className="absolute inset-0 bg-gradient-to-r from-[#fff3df]/95 via-[#fff3df]/82 to-[#fff3df]/45" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#fff3df]/78 via-[#fff3df]/55 to-[#fff3df]/25" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
         <div className="grid lg:grid-cols-[1fr_0.9fr] gap-12 items-center">
