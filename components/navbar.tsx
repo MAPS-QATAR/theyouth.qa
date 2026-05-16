@@ -12,7 +12,7 @@ export default function Navbar() {
   const navItems = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
-  { name: "JADO'o", path: "/jadoo" },
+  { name: "JADOO", path: "/jadoo" },
   { name: "Target Audience", path: "/target-audience" },
  // { name: "Timeline", path: "/timeline" },
 ]
