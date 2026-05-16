@@ -45,14 +45,49 @@ const counters = [
 ]
 
 const infoCards = [
-  ["Dates", "29, 30 & 31 October 2026", "", "from-[#E5243B]/15 to-[#FD6925]/15", "#E5243B"],
-  ["Venue", "Katara Cultural Village", "", "from-[#0A97D9]/15 to-[#19486A]/15", "#0A97D9"],
-  ["Format", "Outdoor Public Youth SDGs Showcase", "", "from-[#3F7E44]/15 to-[#56C02B]/15", "#3F7E44"],
-  ["Participation", "Limited to 17 Schools", "", "from-[#DDA63A]/18 to-[#FCC30B]/20", "#DDA63A"],
-  ["Students", "850 Students", "Up to 50 students per school", "from-[#26BDE2]/15 to-[#00689D]/15", "#00689D"],
-  ["Fee", "QAR 120 per student", "(QAR 6,000 per School)", "from-[#DD1367]/15 to-[#A21942]/15", "#DD1367"],
+  [
+    "Dates",
+    "29, 30 & 31 October 2026",
+    "",
+    "from-[#E5243B]/18 via-[#FFDDD7] to-white",
+    "#E5243B",
+  ],
+  [
+    "Venue",
+    "Katara Cultural Village",
+    "",
+    "from-[#0A97D9]/18 via-[#DDF5FF] to-white",
+    "#0A97D9",
+  ],
+  [
+    "Format",
+    "Outdoor Public Youth SDGs Showcase",
+    "",
+    "from-[#56C02B]/18 via-[#ECF8E7] to-white",
+    "#3F7E44",
+  ],
+  [
+    "Participation",
+    "Limited to 17 Schools",
+    "",
+    "from-[#FCC30B]/22 via-[#FFF5CF] to-white",
+    "#DDA63A",
+  ],
+  [
+    "Students",
+    "850 Students",
+    "Up to 50 students per school",
+    "from-[#26BDE2]/18 via-[#E2F8FF] to-white",
+    "#00689D",
+  ],
+  [
+    "Fee",
+    "QAR 120 per student",
+    "(QAR 6,000 per School)",
+    "from-[#DD1367]/18 via-[#FFE2EE] to-white",
+    "#DD1367",
+  ],
 ]
-
 const whyCards = [
   ["Leadership", "#00689D", "from-[#26BDE2]/35 via-[#0A97D9]/20 to-white"],
   ["Creativity", "#DD1367", "from-[#DD1367]/30 via-[#FF3A21]/18 to-white"],
@@ -231,7 +266,31 @@ export default function JadooPage() {
             </div>
 
             {activeActivity && (
-              <div className="mt-8 bg-white rounded-[2rem] p-8 shadow-sm">
+              <div
+  className="mt-8 rounded-[2rem] p-8 shadow-sm border border-white/80 transition-all duration-500"
+  style={{
+    background:
+      activeActivity === "Art"
+        ? "linear-gradient(135deg, rgba(229,36,59,0.14), rgba(255,255,255,1))"
+        : activeActivity === "Design"
+        ? "linear-gradient(135deg, rgba(221,166,58,0.18), rgba(255,255,255,1))"
+        : activeActivity === "ECO Action"
+        ? "linear-gradient(135deg, rgba(76,159,56,0.18), rgba(255,255,255,1))"
+        : activeActivity === "Storytelling"
+        ? "linear-gradient(135deg, rgba(197,25,45,0.18), rgba(255,255,255,1))"
+        : activeActivity === "Innovation"
+        ? "linear-gradient(135deg, rgba(253,105,37,0.18), rgba(255,255,255,1))"
+        : activeActivity === "Photography"
+        ? "linear-gradient(135deg, rgba(10,151,217,0.18), rgba(255,255,255,1))"
+        : activeActivity === "Interactive Media"
+        ? "linear-gradient(135deg, rgba(221,19,103,0.18), rgba(255,255,255,1))"
+        : activeActivity === "Music"
+        ? "linear-gradient(135deg, rgba(162,25,66,0.18), rgba(255,255,255,1))"
+        : activeActivity === "Community Action"
+        ? "linear-gradient(135deg, rgba(253,157,36,0.18), rgba(255,255,255,1))"
+        : "linear-gradient(135deg, rgba(25,72,106,0.18), rgba(255,255,255,1))",
+  }}
+>
                 <h3 className="text-3xl font-black">
                   {activeActivity} – {activities.find((a) => a[0] === activeActivity)?.[1]}
                 </h3>
