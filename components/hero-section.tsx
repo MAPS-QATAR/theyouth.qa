@@ -28,18 +28,14 @@ export default function HeroSection() {
               A Youth Platform by MAPS International W.L.L.
             </p>
 
-            <h1 className="mt-8 text-6xl md:text-8xl xl:text-9xl font-black leading-[0.9] text-[#1e2f28]">
-              Y.O.U.T.H.
-            </h1>
-
-            <p className="mt-5 text-2xl md:text-4xl font-black text-[#ff6b18]">
+                        <p className="mt-5 text-2xl md:text-4xl font-black text-[#ff6b18]">
               You Own Unlimited Talent & Hope
             </p>
 
-            <p className="mt-8 max-w-3xl mx-auto lg:mx-0 text-lg md:text-2xl leading-relaxed text-[#314238]">
-              Empowering the next generation through creativity, innovation,
-              leadership, culture, and global collaboration.
-            </p>
+            <p className="mt-8 max-w-3xl mx-auto lg:mx-0 text-[1.45rem] md:text-[1.9rem] leading-relaxed text-[#314238] font-light italic tracking-[0.01em]">
+  Empowering the next generation through creativity,
+  innovation, leadership, culture, and global collaboration.
+</p>
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link href="/about">
@@ -52,15 +48,21 @@ export default function HeroSection() {
                 </motion.button>
               </Link>
 
-              <Link href="/jadoo" target="_blank" rel="noreferrer">
-                <motion.button
-                  className="px-8 py-4 rounded-full bg-[#1e2f28] text-white font-black shadow-xl hover:bg-[#314238] transition"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.96 }}
-                >
-                  View JADOO Initiative
-                </motion.button>
-              </Link>
+              <div className="flex flex-col items-start">
+  <Link href="/jadoo" target="_blank" rel="noreferrer">
+    <motion.button
+      className="px-8 py-4 rounded-full bg-[#1e2f28] text-white font-black shadow-xl hover:bg-[#314238] transition"
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.96 }}
+    >
+      View JADOO Initiative
+    </motion.button>
+  </Link>
+
+  <p className="mt-2 ml-3 text-xs tracking-[0.25em] uppercase text-[#7d6f61] italic">
+    Coming Soon...
+  </p>
+</div>
             </div>
           </motion.div>
 
