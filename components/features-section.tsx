@@ -419,14 +419,17 @@ export default function FeaturesSection() {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.7 }}
               >
-                The Youth.qa (You Own Unlimited Talents and Hope) is a transformative youth empowerment project celebrating creativity, education, and expression. Join us at Katara Cultural Village for three days of innovative activities designed to inspire young individuals aged 13-21.
+                THE Y.O.U.T.H™ is the dynamic youth wing of MAPS International W.L.L., created to inspire, empower, and shape the next generation of young leaders, creators, and innovators.
+Built on the vision of “You Own Unlimited Talents & Hope,” the platform encourages youth to explore creativity, innovation, sustainability, culture, education, leadership, and social impact.
+
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.9 }}
               >
-                Experience workshops, exhibitions, fashion showcases, and networking opportunities across Innovation, Startups, AI, Art, Culture, and Fashion—all aligned with global sustainability goals.
+                Through workshops, exhibitions, festivals, space science initiatives, SDG programs, creative learning experiences, and global collaborations, THE Y.O.U.T.H™ provides young minds with opportunities to discover their potential and transform ideas into meaningful action.
+It is a movement where imagination meets purpose, and youth become the creators of a brighter future.
               </motion.p>
             </div>
 
