@@ -27,61 +27,19 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/">
-            <motion.div
-              className="text-2xl md:text-3xl font-black text-[#2a3a32] cursor-pointer relative"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 400 }}
-            >
-              <span className="relative inline-block">
-                The Youth.qa
-                {/* Small star doodle */}
-                <motion.svg
-                  className="absolute -top-2 -right-3 w-4 h-4 text-[#f4e8a8]"
-                  viewBox="0 0 100 100"
-                  initial={{ scale: 0, rotate: -180 }}
-                  animate={{ scale: 1, rotate: 0 }}
-                  transition={{ duration: 0.6, delay: 0.8, type: "spring" }}
-                >
-                  <motion.path
-                    d="M 50 20 L 60 40 L 80 45 L 65 60 L 68 80 L 50 70 L 32 80 L 35 60 L 20 45 L 40 40 Z"
-                    fill="currentColor"
-                    animate={{ rotate: [0, 10, -10, 0] }}
-                    transition={{ duration: 3, repeat: Infinity }}
-                  />
-                </motion.svg>
-
-                {/* Small circle doodle */}
-                <motion.svg
-                  className="absolute -bottom-2 -left-2 w-3 h-3 text-[#5a8a6a]"
-                  viewBox="0 0 100 100"
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.5, delay: 1, type: "spring" }}
-                >
-                  <circle cx="50" cy="50" r="40" fill="currentColor" />
-                </motion.svg>
-
-                {/* Curved line doodle */}
-                <motion.svg
-                  className="absolute -top-1 -left-4 w-5 h-5 text-[#4a8fff] opacity-60"
-                  viewBox="0 0 100 100"
-                  initial={{ pathLength: 0, opacity: 0 }}
-                  animate={{ pathLength: 1, opacity: 0.6 }}
-                  transition={{ duration: 1, delay: 0.9 }}
-                >
-                  <motion.path
-                    d="M 10 50 Q 30 20, 50 50"
-                    stroke="currentColor"
-                    strokeWidth="8"
-                    fill="none"
-                    strokeLinecap="round"
-                  />
-                </motion.svg>
-              </span>
-            </motion.div>
-          </Link>
-
+<Link href="/">
+  <motion.div
+    whileHover={{ scale: 1.03 }}
+    transition={{ type: "spring", stiffness: 300 }}
+    className="cursor-pointer"
+  >
+    <img
+      src="/youth-wordmark.png"
+      alt="The Y.O.U.T.H."
+      className="h-14 md:h-16 w-auto object-contain"
+    />
+  </motion.div>
+</Link>
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item, index) => (
@@ -104,16 +62,18 @@ export default function Navbar() {
           </div>
 
           {/* CTA Button */}
-          <motion.button
-            className="hidden md:block px-6 py-3 border-2 border-[#2a3a32] text-[#2a3a32] rounded-full font-bold hover:bg-[#2a3a32] hover:text-[#e8ded2] transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
-            Get in touch
-          </motion.button>
+<Link href="mailto:info@mapsinternational.net">
+  <motion.button
+    className="hidden md:block px-6 py-3 border-2 border-[#2a3a32] text-[#2a3a32] rounded-full font-bold hover:bg-[#2a3a32] hover:text-[#e8ded2] transition-colors"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.5, delay: 0.3 }}
+  >
+    Get in touch
+  </motion.button>
+</Link>
 
           {/* Mobile Menu Button */}
           <button
@@ -165,9 +125,11 @@ export default function Navbar() {
                 </div>
               </Link>
             ))}
-            <button className="w-full px-6 py-3 border-2 border-[#2a3a32] text-[#2a3a32] rounded-full font-bold hover:bg-[#2a3a32] hover:text-[#e8ded2] transition-colors">
-              Get in touch
-            </button>
+            <Link href="mailto:info@mapsinternational.net">
+  <button className="w-full px-6 py-3 border-2 border-[#2a3a32] text-[#2a3a32] rounded-full font-bold hover:bg-[#2a3a32] hover:text-[#e8ded2] transition-colors">
+    Get in touch
+  </button>
+</Link>
           </motion.div>
         )}
       </div>
