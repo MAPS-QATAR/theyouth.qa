@@ -119,17 +119,17 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    cursor: none !important;
+    cursor: auto !important;;
   }
   body {
     @apply bg-background text-foreground;
-    cursor: none !important;
+    cursor: auto !important;;
   }
 
   /* Added smooth scrolling for better UX */
   html {
     scroll-behavior: smooth;
-    cursor: none !important;
+    cursor: auto !important;;
   }
 }
 
