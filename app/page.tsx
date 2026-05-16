@@ -5,9 +5,8 @@ import Navbar from "@/components/navbar"
 import HeroSection from "@/components/hero-section"
 import FloatingCard from "@/components/floating-card"
 import FeaturesSection from "@/components/features-section"
-import EventSchedule from "@/components/event-schedule"
 import EventThemes from "@/components/event-themes"
-import ProgramsSection from "@/components/programs-section"
+import InitiativesPrograms from "@/components/initiatives-programs"
 import ImpactSection from "@/components/impact-section"
 import Footer from "@/components/footer"
 
@@ -23,9 +22,8 @@ export default function Home() {
       <HeroSection />
       <FloatingCard />
       <FeaturesSection />
-      <EventSchedule />
+      <InitiativesPrograms />
       <EventThemes />
-      <ProgramsSection />
       <ImpactSection />
       <Footer />
     </motion.main>
