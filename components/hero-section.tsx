@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#fff4e6] pt-28 md:pt-32">
+    <section className="relative min-h-[92vh] overflow-hidden bg-[#fff4e6] pt-28 md:pt-32">
       {/* VIDEO BACKGROUND */}
       <div className="absolute inset-0 opacity-[0.78]">
         <video
@@ -38,7 +38,7 @@ export default function HeroSection() {
       />
 
       {/* MAIN CONTENT */}
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 md:py-20">
+      <div className="relative z-10 mx-auto max-w-7xl px-8 md:px-10 py-16 md:py-20">
         <div className="grid items-center gap-8 lg:grid-cols-[1fr_0.92fr]">
           {/* LEFT CONTENT */}
           <motion.div
@@ -108,7 +108,7 @@ export default function HeroSection() {
               <img
                 src="/Y.O.U.T.H..jpeg"
                 alt="Y.O.U.T.H. Youth Vision"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover brightness-[0.96] saturate-[0.92]"
               />
             </div>
 
