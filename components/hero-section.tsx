@@ -39,7 +39,7 @@ export default function HeroSection() {
 
       {/* MAIN CONTENT */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 md:py-20">
-        <div className="grid items-center gap-14 lg:grid-cols-[1fr_0.88fr]">
+        <div className="grid items-center gap-14 lg:grid-cols-[0.92fr_0.95fr]">
           {/* LEFT CONTENT */}
           <motion.div
             initial={{ opacity: 0, y: 28 }}
@@ -53,7 +53,7 @@ export default function HeroSection() {
             </p>
 
             {/* HEADLINE */}
-            <h1 className="mt-7 max-w-4xl text-[3.4rem] font-black leading-[0.92] tracking-[-0.05em] text-[#183028] sm:text-[4.5rem] md:text-[5.8rem] lg:text-[6.6rem]">
+            <h1 className="mt-7 max-w-3xl text-[2.9rem] font-black leading-[0.92] tracking-[-0.055em] text-[#183028] sm:text-[4rem] md:text-[5rem] lg:text-[5.8rem]">
               You Own Unlimited
               <span className="block youth-gradient-text">
                 Talent & Hope
@@ -104,7 +104,7 @@ export default function HeroSection() {
             className="relative hidden lg:block"
           >
             {/* MAIN IMAGE */}
-            <div className="relative mx-auto h-[540px] w-[440px] overflow-hidden rounded-[3rem] border-[10px] border-white/90 bg-white shadow-[0_30px_90px_rgba(30,47,40,0.22)]">
+            <div className="relative mx-auto h-[560px] w-[460px] overflow-hidden rounded-[3rem] border-[10px] border-white/90 bg-white shadow-[0_30px_90px_rgba(30,47,40,0.22)]">
               <img
                 src="/Y.O.U.T.H..jpeg"
                 alt="Y.O.U.T.H. Youth Vision"
