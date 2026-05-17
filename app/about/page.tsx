@@ -31,9 +31,7 @@ export default function AboutPage() {
     >
       <Navbar />
 
-      <section className="relative overflow-hidden px-6 pb-24 pt-40 md:pt-48">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(255,122,24,0.28),transparent_28%),radial-gradient(circle_at_82%_20%,rgba(10,151,217,0.18),transparent_30%),radial-gradient(circle_at_50%_90%,rgba(221,19,103,0.13),transparent_32%)]" />
-
+      <section className="relative overflow-hidden youth-section-light px-6 pb-24 pt-40 md:pt-48">
         <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
           <motion.div
             initial={{ opacity: 0, y: 28 }}
@@ -45,7 +43,7 @@ export default function AboutPage() {
             </p>
 
             <h1 className="mt-7 max-w-5xl text-5xl font-black leading-[0.96] tracking-[-0.04em] md:text-7xl">
-              A platform where youth potential becomes future impact.
+              Youth potential deserves a global stage.
             </h1>
 
             <p className="mt-8 max-w-3xl text-xl leading-relaxed text-[#44554d] md:text-2xl">
@@ -56,13 +54,13 @@ export default function AboutPage() {
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <Link href="/target-audience">
-                <button className="rounded-full bg-gradient-to-r from-[#ff7a18] to-[#dd1367] px-8 py-4 font-black text-white shadow-xl">
+                <button className="rounded-full bg-gradient-to-r from-[#ff7a18] to-[#dd1367] px-8 py-4 font-black text-white shadow-xl transition hover:-translate-y-1">
                   Who We Empower
                 </button>
               </Link>
 
               <Link href="/jadoo" target="_blank" rel="noreferrer">
-                <button className="rounded-full bg-[#1e2f28] px-8 py-4 font-black text-white shadow-xl">
+                <button className="rounded-full bg-[#1e2f28] px-8 py-4 font-black text-white shadow-xl transition hover:-translate-y-1">
                   Explore JADOO
                 </button>
               </Link>
@@ -75,7 +73,7 @@ export default function AboutPage() {
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
             transition={{ duration: 0.9, delay: 0.2 }}
           >
-            <div className="relative mx-auto h-[560px] w-[460px] overflow-hidden rounded-[3rem] border-[10px] border-white bg-white shadow-2xl">
+            <div className="relative mx-auto h-[560px] w-[460px] overflow-hidden rounded-[3.2rem] border-[10px] border-white bg-white shadow-[0_30px_90px_rgba(30,47,40,0.25)]">
               <img
                 src="/Y.O.U.T.H..jpeg"
                 alt="THE Y.O.U.T.H vision"
@@ -84,9 +82,9 @@ export default function AboutPage() {
             </div>
 
             <motion.div
-              className="absolute -left-10 top-10 rounded-[2rem] bg-[#ffe7a3] px-7 py-6 shadow-2xl"
+              className="absolute -left-8 top-0 rounded-[2rem] bg-[#ffe7a3] px-7 py-6 shadow-2xl"
               animate={{ y: [0, -12, 0] }}
-              transition={{ duration: 4, repeat: Infinity }}
+              transition={{ duration: 4.5, repeat: Infinity }}
             >
               <p className="text-4xl font-black">Youth</p>
               <p className="font-bold">with purpose</p>
@@ -95,7 +93,7 @@ export default function AboutPage() {
             <motion.div
               className="absolute -right-8 bottom-20 rounded-full bg-[#0a97d9] px-8 py-5 font-black text-white shadow-2xl"
               animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
+              transition={{ duration: 4.5, repeat: Infinity, delay: 0.5 }}
             >
               Creativity + Impact
             </motion.div>
@@ -103,54 +101,50 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-white px-6 py-24 md:py-32">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-            <motion.div
-              initial={{ opacity: 0, x: -26 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <p className="inline-flex rounded-full bg-[#fff3df] px-5 py-2 text-xs font-black uppercase tracking-[0.24em] text-[#ff6b18]">
-                Our Vision
-              </p>
+      <section className="bg-white px-6 py-24 md:py-32">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+          <motion.div
+            initial={{ opacity: 0, x: -26 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <p className="inline-flex rounded-full bg-[#fff3df] px-5 py-2 text-xs font-black uppercase tracking-[0.24em] text-[#ff6b18]">
+              Our Vision
+            </p>
 
-              <h2 className="mt-6 text-4xl font-black leading-tight md:text-6xl">
-                You Own Unlimited Talents & Hope.
-              </h2>
-            </motion.div>
+            <h2 className="mt-6 text-4xl font-black leading-[1] tracking-[-0.035em] md:text-6xl">
+              You Own Unlimited Talents & Hope.
+            </h2>
+          </motion.div>
 
-            <motion.div
-              className="space-y-6 text-lg leading-relaxed text-[#44554d]"
-              initial={{ opacity: 0, x: 26 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <p>
-                Built on the vision of “You Own Unlimited Talents & Hope,” the platform
-                encourages youth to explore creativity, innovation, sustainability,
-                culture, education, leadership, and social impact.
-              </p>
+          <motion.div
+            className="space-y-6 text-lg leading-relaxed text-[#44554d]"
+            initial={{ opacity: 0, x: 26 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <p>
+              Built on the vision of “You Own Unlimited Talents & Hope,” the platform
+              encourages youth to explore creativity, innovation, sustainability,
+              culture, education, leadership, and social impact.
+            </p>
 
-              <p>
-                Through workshops, exhibitions, festivals, space science initiatives,
-                SDG programs, creative learning experiences, and global collaborations,
-                THE Y.O.U.T.H™ provides young minds with opportunities to discover their
-                potential and transform ideas into meaningful action.
-              </p>
+            <p>
+              Through workshops, exhibitions, festivals, space science initiatives,
+              SDG programs, creative learning experiences, and global collaborations,
+              THE Y.O.U.T.H™ provides young minds with opportunities to discover their
+              potential and transform ideas into meaningful action.
+            </p>
 
-              <p className="font-black text-[#1e2f28]">
-                It is a movement where imagination meets purpose, and youth become the
-                creators of a brighter future.
-              </p>
-            </motion.div>
-          </div>
+            <p className="font-black text-[#1e2f28]">
+              It is a movement where imagination meets purpose, and youth become the
+              creators of a brighter future.
+            </p>
+          </motion.div>
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#fff8ee] px-6 py-24 md:py-32">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(255,122,24,0.18),transparent_28%),radial-gradient(circle_at_85%_30%,rgba(10,151,217,0.14),transparent_30%)]" />
-
+      <section className="relative overflow-hidden youth-section-light px-6 py-24 md:py-32">
         <div className="relative z-10 mx-auto max-w-7xl">
           <motion.div
             className="mx-auto mb-14 max-w-4xl text-center"
@@ -162,7 +156,7 @@ export default function AboutPage() {
               What We Build
             </p>
 
-            <h2 className="mt-6 text-4xl font-black leading-tight md:text-6xl">
+            <h2 className="mt-6 text-4xl font-black leading-[1] tracking-[-0.035em] md:text-6xl">
               A future-ready ecosystem for young changemakers.
             </h2>
           </motion.div>
@@ -171,7 +165,7 @@ export default function AboutPage() {
             {pillars.map(([title, text, gradient], index) => (
               <motion.div
                 key={title}
-                className="group relative overflow-hidden rounded-[2rem] bg-white p-7 shadow-sm transition hover:-translate-y-2 hover:shadow-2xl"
+                className="group relative overflow-hidden rounded-[2rem] bg-white/88 p-7 shadow-[0_18px_60px_rgba(30,47,40,0.08)] backdrop-blur transition hover:-translate-y-2 hover:shadow-[0_28px_90px_rgba(30,47,40,0.14)]"
                 initial={{ opacity: 0, y: 28 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -186,9 +180,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#111f1a] px-6 py-24 text-white md:py-32">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,122,24,0.25),transparent_30%),radial-gradient(circle_at_80%_30%,rgba(10,151,217,0.22),transparent_30%),radial-gradient(circle_at_50%_90%,rgba(221,19,103,0.18),transparent_32%)]" />
-
+      <section className="relative overflow-hidden youth-section-dark px-6 py-24 text-white md:py-32">
         <div className="relative z-10 mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.95fr_1.05fr]">
           <motion.div
             initial={{ opacity: 0, y: 26 }}
@@ -199,7 +191,7 @@ export default function AboutPage() {
               Pathways
             </p>
 
-            <h2 className="mt-6 text-4xl font-black leading-tight md:text-6xl">
+            <h2 className="mt-6 text-4xl font-black leading-[1] tracking-[-0.035em] md:text-6xl">
               From inspiration to action.
             </h2>
 
@@ -214,7 +206,7 @@ export default function AboutPage() {
             {pathways.map((item, index) => (
               <motion.div
                 key={item}
-                className="rounded-[1.5rem] border border-white/10 bg-white/10 p-5 font-bold text-white/85 backdrop-blur-xl"
+                className="rounded-[1.5rem] border border-white/10 bg-white/10 p-5 font-bold text-white/85 backdrop-blur-xl transition hover:-translate-y-1 hover:bg-white/15"
                 initial={{ opacity: 0, y: 22 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -227,9 +219,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#fff8ee] px-6 py-24 md:py-32">
+      <section className="relative overflow-hidden youth-section-light px-6 py-24 md:py-32">
         <div className="mx-auto max-w-5xl text-center">
-          <h2 className="text-4xl font-black leading-tight md:text-6xl">
+          <h2 className="text-4xl font-black leading-[1] tracking-[-0.035em] md:text-6xl">
             A movement where imagination meets purpose.
           </h2>
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-[#44554d]">
@@ -239,7 +231,7 @@ export default function AboutPage() {
           </p>
 
           <Link href="mailto:info@mapsinternational.net">
-            <button className="mt-10 rounded-full bg-[#1e2f28] px-8 py-4 font-black text-white shadow-xl">
+            <button className="mt-10 rounded-full bg-[#1e2f28] px-8 py-4 font-black text-white shadow-xl transition hover:-translate-y-1">
               Connect with THE Y.O.U.T.H™
             </button>
           </Link>
