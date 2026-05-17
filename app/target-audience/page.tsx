@@ -1,345 +1,200 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Link from "next/link"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
-import Image from "next/image"
+
+const groups = [
+  ["Students", "Young learners ready to explore creativity, confidence, leadership, innovation, and purpose.", "🎓", "from-[#ff7a18] to-[#dd1367]"],
+  ["Schools", "Institutions seeking meaningful creative, cultural, sustainability, and future-skills engagement.", "🏫", "from-[#0a97d9] to-[#26bde2]"],
+  ["Young Creators", "Artists, designers, storytellers, performers, makers, innovators, and emerging talents.", "🎨", "from-[#dd1367] to-[#ff7a18]"],
+  ["Educators", "Teachers, mentors, coordinators, and guides shaping the learning journeys of young people.", "🌟", "from-[#19486a] to-[#0a97d9]"],
+  ["Youth Leaders", "Changemakers who want to build confidence, responsibility, communication, and public action.", "🚀", "from-[#3f7e44] to-[#56c02b]"],
+  ["Partners", "Cultural, educational, creative, and institutional collaborators supporting youth impact.", "🤝", "from-[#facc15] to-[#ff7a18]"],
+]
+
+const experiences = [
+  "Creative learning and hands-on workshops",
+  "Youth festivals, exhibitions, and showcases",
+  "Innovation, AI, and future-skills exposure",
+  "Space science and curiosity-led discovery",
+  "Culture, art, fashion, and storytelling",
+  "Sustainability, SDGs, and social impact",
+]
 
 export default function TargetAudiencePage() {
-  const targetGroups = [
-    {
-      title: "Students",
-      description: "From schools and universities passionate about learning and growth",
-      icon: "🎓",
-      color: "#4a8fff"
-    },
-    {
-      title: "Young Creators",
-      description: "Individual innovators and artists ready to showcase their talents",
-      icon: "🎨",
-      color: "#ff6b9d"
-    },
-    {
-      title: "Educators",
-      description: "Mentors guiding the next generation of leaders",
-      icon: "👨‍🏫",
-      color: "#5a8a6a"
-    },
-    {
-      title: "Passionate Youth",
-      description: "Anyone aged 13-21 passionate about art, fashion, culture, and growth",
-      icon: "✨",
-      color: "#f4e8a8"
-    }
-  ]
-
-  const activities = [
-    {
-      title: "Painting",
-      image: "/high-angle-artist-chair-painting_23-2150170506.jpg",
-      description: "Express yourself through colors and creativity",
-      color: "#ff6b9d"
-    },
-    {
-      title: "Photography",
-      image: "/playing-1.jpg",
-      description: "Capture moments and tell stories through the lens",
-      color: "#4a8fff"
-    },
-    {
-      title: "Fashion",
-      video: "/fashion-design.mp4",
-      description: "Showcase your unique style and design vision",
-      color: "#9b59b6"
-    },
-    {
-      title: "Design",
-      video: "/sticky-note.mp4",
-      description: "Create innovative solutions and visual masterpieces",
-      color: "#5a8a6a"
-    }
-  ]
-
   return (
     <motion.main
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="min-h-screen"
+      className="min-h-screen bg-[#fff8ee] text-[#1e2f28]"
     >
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="relative bg-[#4a5a52] min-h-[50vh] md:min-h-[60vh] flex items-center justify-center overflow-hidden px-4 md:px-6 py-16 md:py-20">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-30"
-        >
-          <source src="/6260_Wall_Painting_1920x1080.mp4" type="video/mp4" />
-        </video>
-
-        <div className="relative z-10 max-w-6xl mx-auto text-center">
+      <section className="relative overflow-hidden youth-section-light px-6 pb-24 pt-40 md:pt-48">
+        <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1fr_0.9fr]">
           <motion.div
-            className="mb-6 md:mb-8"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, type: "spring" }}
-          >
-            <div className="inline-block bg-[#f4e8a8] text-[#2a3a32] px-6 md:px-8 py-2 md:py-3 rounded-full font-bold text-base md:text-lg">
-              Ages 13-21
-            </div>
-          </motion.div>
-
-          <motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-[#e8ded2] mb-4 md:mb-6 px-2"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <span className="block sm:inline">Target </span>
-            <span className="relative inline-block">
-              Demographic
-              <motion.div
-                className="absolute -bottom-1 md:-bottom-2 left-0 right-0 h-2 md:h-3 bg-[#5a8a6a]"
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-              />
-            </span>
-          </motion.h1>
-
-          <motion.p
-            className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#e8ded2]/90 max-w-3xl mx-auto px-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            Empowering the next generation of leaders, creators, and innovators
-          </motion.p>
-
-          {/* Animated Doodles - Hidden on mobile */}
-          <motion.svg
-            className="hidden lg:block absolute top-10 left-10 w-32 h-32 text-[#f4e8a8] opacity-40"
-            viewBox="0 0 100 100"
-            initial={{ opacity: 0, rotate: -45 }}
-            animate={{ opacity: 0.4, rotate: 0 }}
-            transition={{ duration: 1 }}
-          >
-            <motion.path
-              d="M 20 50 Q 30 30, 50 50 Q 70 70, 80 50"
-              stroke="currentColor"
-              strokeWidth="4"
-              fill="none"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 2, delay: 0.5 }}
-            />
-          </motion.svg>
-        </div>
-      </section>
-
-      {/* Target Groups */}
-      <section className="relative bg-[#e8ded2] py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-6xl font-black text-[#2a3a32] mb-6">
-              Who Should Join?
-            </h2>
-            <p className="text-xl text-[#2a3a32]/70 max-w-3xl mx-auto">
-              The Youth.qa is designed for youth passionate about creativity, innovation, and making a difference
+            <p className="inline-flex rounded-full bg-white px-5 py-2 text-xs font-black uppercase tracking-[0.24em] text-[#ff6b18] shadow-sm">
+              Who We Empower
             </p>
-          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-            {targetGroups.map((group, index) => (
-              <motion.div
-                key={group.title}
-                className="bg-white rounded-3xl p-8 shadow-lg text-center relative overflow-hidden"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -10, scale: 1.05 }}
-              >
-                <motion.div
-                  className="absolute top-0 right-0 w-32 h-32 rounded-full opacity-10"
-                  style={{ backgroundColor: group.color }}
-                  animate={{ scale: [1, 1.2, 1], rotate: 360 }}
-                  transition={{ duration: 10, repeat: Infinity, delay: index * 0.5 }}
-                />
+            <h1 className="mt-7 max-w-5xl text-5xl font-black leading-[0.96] tracking-[-0.04em] md:text-7xl">
+              Youth, schools, creators, educators, and partners.
+            </h1>
 
-                <motion.div
-                  className="text-6xl mb-4 relative z-10"
-                  animate={{ scale: [1, 1.1, 1] }}
-                  transition={{ duration: 2, repeat: Infinity, delay: index * 0.3 }}
-                >
-                  {group.icon}
-                </motion.div>
-                <h3 className="text-2xl font-black text-[#2a3a32] mb-3 relative z-10">
-                  {group.title}
-                </h3>
-                <p className="text-[#2a3a32]/70 leading-relaxed relative z-10">
-                  {group.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+            <p className="mt-8 max-w-3xl text-xl leading-relaxed text-[#44554d] md:text-2xl">
+              THE Y.O.U.T.H™ is built for young minds and the ecosystems that support
+              them — helping talent grow into confidence, creativity, leadership,
+              and meaningful action.
+            </p>
 
-          {/* Age Range Highlight */}
-          <motion.div
-            className="bg-gradient-to-br from-[#4a8fff] to-[#5a8a6a] rounded-3xl p-12 text-center mb-20 relative overflow-hidden"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <motion.div
-              className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full opacity-10"
-              animate={{ scale: [1, 1.3, 1], x: [0, 50, 0], y: [0, -30, 0] }}
-              transition={{ duration: 15, repeat: Infinity }}
-            />
+            <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+              <Link href="/jadoo" target="_blank" rel="noreferrer">
+                <button className="rounded-full bg-gradient-to-r from-[#ff7a18] to-[#dd1367] px-8 py-4 font-black text-white shadow-xl transition hover:-translate-y-1">
+                  Explore JADOO
+                </button>
+              </Link>
 
-            <div className="relative z-10">
-              <motion.h2
-                className="text-5xl md:text-7xl font-black text-white mb-4"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                13-21 Years
-              </motion.h2>
-              <p className="text-2xl text-white/90 max-w-3xl mx-auto">
-                This event promotes sustainability, critical thinking, and social responsibility, making it ideal for young leaders aligning with global goals
-              </p>
+              <Link href="mailto:info@mapsinternational.net">
+                <button className="rounded-full bg-[#1e2f28] px-8 py-4 font-black text-white shadow-xl transition hover:-translate-y-1">
+                  Partner With Us
+                </button>
+              </Link>
             </div>
           </motion.div>
-        </div>
-      </section>
 
-      {/* Art, Fashion, and Culture Section */}
-      <section className="relative bg-[#2a3a32] py-20 px-6">
-        <div className="max-w-7xl mx-auto">
           <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            className="relative hidden lg:block"
+            initial={{ opacity: 0, scale: 0.94, rotate: 2 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{ duration: 0.9, delay: 0.2 }}
           >
+            <div className="relative mx-auto h-[560px] w-[460px] overflow-hidden rounded-[3.2rem] border-[10px] border-white bg-white shadow-[0_30px_90px_rgba(30,47,40,0.25)]">
+              <video autoPlay loop muted playsInline className="h-full w-full object-cover">
+                <source src="/lady-dancing.mp4" type="video/mp4" />
+              </video>
+            </div>
+
             <motion.div
-              className="inline-block mb-6"
-              initial={{ scale: 0, rotate: -180 }}
-              whileInView={{ scale: 1, rotate: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, type: "spring" }}
+              className="absolute -left-8 top-0 rounded-[2rem] bg-[#ffe7a3] px-7 py-6 shadow-2xl"
+              animate={{ y: [0, -12, 0] }}
+              transition={{ duration: 4.5, repeat: Infinity }}
             >
-              <div className="w-20 h-20 bg-[#f4e8a8] rounded-full flex items-center justify-center text-4xl">
-                🎨
-              </div>
+              <p className="text-4xl font-black">13+</p>
+              <p className="font-bold">Youth-ready programs</p>
             </motion.div>
 
-            <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
-              Art, Fashion{" "}
-              <span className="relative inline-block">
-                & Culture
-                <motion.div
-                  className="absolute -bottom-2 left-0 right-0 h-3 bg-[#f4e8a8]"
-                  initial={{ scaleX: 0 }}
-                  whileInView={{ scaleX: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.3 }}
-                />
-              </span>
-            </h2>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Celebrating creativity across key themes, providing opportunities for expression and collaboration
+            <motion.div
+              className="absolute -right-8 bottom-20 rounded-full bg-[#0a97d9] px-8 py-5 font-black text-white shadow-2xl"
+              animate={{ y: [0, 12, 0] }}
+              transition={{ duration: 4.5, repeat: Infinity, delay: 0.5 }}
+            >
+              Creative Futures
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden bg-white px-6 py-24 md:py-32">
+        <div className="mx-auto max-w-7xl">
+          <motion.div
+            className="mx-auto mb-14 max-w-4xl text-center"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <p className="inline-flex rounded-full bg-[#fff3df] px-5 py-2 text-xs font-black uppercase tracking-[0.24em] text-[#ff6b18]">
+              Our Community
             </p>
+
+            <h2 className="mt-6 text-4xl font-black leading-[1] tracking-[-0.035em] md:text-6xl">
+              A platform for every young person with potential.
+            </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {activities.map((activity, index) => (
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {groups.map(([title, description, icon, gradient], index) => (
               <motion.div
-                key={activity.title}
-                className={`relative rounded-3xl overflow-hidden shadow-2xl ${
-                  index === 0 ? 'md:col-span-2' : ''
-                }`}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                key={title}
+                className="group relative overflow-hidden rounded-[2rem] bg-white/90 p-8 shadow-[0_18px_60px_rgba(30,47,40,0.08)] transition hover:-translate-y-2 hover:shadow-[0_28px_90px_rgba(30,47,40,0.14)]"
+                initial={{ opacity: 0, y: 28 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ scale: 1.02 }}
+                transition={{ delay: index * 0.07 }}
               >
-                <div className="relative h-96">
-                  {activity.video ? (
-                    <video
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      className="absolute inset-0 w-full h-full object-cover"
-                    >
-                      <source src={activity.video} type="video/mp4" />
-                    </video>
-                  ) : (
-                    <Image
-                      src={activity.image!}
-                      alt={activity.title}
-                      fill
-                      className="object-cover"
-                    />
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#2a3a32] via-transparent to-transparent" />
-                </div>
-
-                <motion.div
-                  className="absolute bottom-0 left-0 right-0 p-8 text-white"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 + 0.3 }}
-                >
-                  <h3 className="text-3xl font-black mb-2">{activity.title}</h3>
-                  <p className="text-white/80 text-lg">{activity.description}</p>
-                </motion.div>
+                <div className={`absolute inset-x-0 top-0 h-2 bg-gradient-to-r ${gradient}`} />
+                <div className="text-5xl">{icon}</div>
+                <h3 className="mt-6 text-2xl font-black text-[#1e2f28]">{title}</h3>
+                <p className="mt-4 leading-relaxed text-[#5b6b63]">{description}</p>
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* Empowerment Message */}
+      <section className="relative overflow-hidden youth-section-dark px-6 py-24 text-white md:py-32">
+        <div className="relative z-10 mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <motion.div
-            className="mt-20 text-center"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 26 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
           >
-            <p className="text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-              The event focuses on empowering young individuals through innovation and creativity in art, fashion, and culture. It promotes cultural exchange, fostering the next generation through creative expression over three transformative days.
+            <p className="inline-flex rounded-full bg-white/10 px-5 py-2 text-xs font-black uppercase tracking-[0.24em] text-[#ffe7a3]">
+              Experiences
+            </p>
+
+            <h2 className="mt-6 text-4xl font-black leading-[1] tracking-[-0.035em] md:text-6xl">
+              Learning becomes powerful when it becomes real.
+            </h2>
+
+            <p className="mt-6 text-lg leading-relaxed text-white/72">
+              THE Y.O.U.T.H™ creates real platforms where youth can participate,
+              present, collaborate, build confidence, and transform ideas into
+              visible outcomes.
             </p>
           </motion.div>
-        </div>
 
-        {/* Floating Animated Elements */}
-        <motion.div
-          className="absolute top-20 right-20 w-24 h-24 rounded-full bg-[#4a8fff]/20"
-          animate={{ y: [0, -30, 0], rotate: 360 }}
-          transition={{ duration: 8, repeat: Infinity }}
-        />
-        <motion.div
-          className="absolute bottom-20 left-20 w-32 h-32 rounded-full bg-[#5a8a6a]/20"
-          animate={{ y: [0, 30, 0], rotate: -360 }}
-          transition={{ duration: 10, repeat: Infinity }}
-        />
+          <div className="grid gap-4 md:grid-cols-2">
+            {experiences.map((item, index) => (
+              <motion.div
+                key={item}
+                className="rounded-[1.5rem] border border-white/10 bg-white/10 p-5 font-bold text-white/85 backdrop-blur-xl transition hover:-translate-y-1 hover:bg-white/15"
+                initial={{ opacity: 0, y: 22 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.06 }}
+              >
+                {item}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden youth-section-light px-6 py-24 md:py-32">
+        <div className="mx-auto max-w-5xl text-center">
+          <h2 className="text-4xl font-black leading-[1] tracking-[-0.035em] md:text-6xl">
+            Youth are not only the audience — they are the future creators.
+          </h2>
+
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-[#44554d]">
+            THE Y.O.U.T.H™ welcomes learners, creators, schools, mentors,
+            institutions, and partners who believe in empowering the next generation
+            through creativity, innovation, leadership, culture, and action.
+          </p>
+
+          <Link href="mailto:info@mapsinternational.net">
+            <button className="mt-10 rounded-full bg-[#1e2f28] px-8 py-4 font-black text-white shadow-xl transition hover:-translate-y-1">
+              Collaborate With Us
+            </button>
+          </Link>
+        </div>
       </section>
 
       <Footer />
