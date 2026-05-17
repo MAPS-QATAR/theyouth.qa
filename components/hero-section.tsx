@@ -39,7 +39,7 @@ export default function HeroSection() {
 
       {/* MAIN CONTENT */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 md:py-20">
-        <div className="grid items-center gap-14 lg:grid-cols-[0.92fr_0.95fr]">
+        <div className="grid items-center gap-8 lg:grid-cols-[1fr_0.92fr]">
           {/* LEFT CONTENT */}
           <motion.div
             initial={{ opacity: 0, y: 28 }}
@@ -48,7 +48,7 @@ export default function HeroSection() {
             className="text-center lg:text-left"
           >
             {/* LABEL */}
-            <p className="inline-flex rounded-full border border-white/50 bg-white/70 px-5 py-2 text-[10px] font-black uppercase tracking-[0.28em] text-[#3a2d21] shadow-sm backdrop-blur-xl md:text-xs">
+            <p className="inline-flex rounded-full border border-white/50 bg-white/70 px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-[#3a2d21] shadow-sm backdrop-blur-xl md:text-xs">
               A Youth Platform by MAPS International W.L.L.
             </p>
 
