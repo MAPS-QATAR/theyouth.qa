@@ -18,28 +18,28 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 right-0 z-50 border-b border-white/40 bg-[#fff8ee]/90 backdrop-blur-xl shadow-sm"
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
+      className="fixed left-0 right-0 top-0 z-50 px-4 pt-4"
+      initial={{ y: -90, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.65, ease: "easeOut" }}
     >
-      <div className="max-w-7xl mx-auto px-5 md:px-6 py-3">
+      <div className="mx-auto max-w-7xl rounded-full border border-white/70 bg-[#fff8ee]/82 px-5 py-3 shadow-[0_18px_60px_rgba(30,47,40,0.12)] backdrop-blur-2xl md:px-6">
         <div className="flex items-center justify-between gap-6">
           <Link href="/" aria-label="Y.O.U.T.H. Home">
             <motion.div
-              whileHover={{ scale: 1.03 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="cursor-pointer"
+              whileHover={{ scale: 1.025 }}
+              transition={{ type: "spring", stiffness: 260 }}
+              className="flex items-center"
             >
               <img
                 src="/youth-wordmark.png"
                 alt="Y.O.U.T.H. – You Own Unlimited Talent & Hope"
-                className="h-12 md:h-16 w-auto object-contain"
+                className="h-11 w-auto object-contain md:h-14"
               />
             </motion.div>
           </Link>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden items-center gap-7 md:flex">
             {navItems.map((item, index) => {
               const active = pathname === item.path
 
@@ -49,18 +49,19 @@ export default function Navbar() {
                   href={item.path}
                   target={item.external ? "_blank" : undefined}
                   rel={item.external ? "noreferrer" : undefined}
+                  className="group"
                 >
                   <motion.div
-                    className={`relative text-sm font-semibold tracking-wide transition-colors cursor-pointer ${
-                      active ? "text-[#111827]" : "text-[#314238] hover:text-[#111827]"
+                    className={`relative text-sm font-black tracking-wide transition-colors ${
+                      active ? "text-[#1e2f28]" : "text-[#42544b] hover:text-[#1e2f28]"
                     }`}
-                    initial={{ opacity: 0, y: -12 }}
+                    initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.45, delay: index * 0.08 }}
+                    transition={{ duration: 0.45, delay: index * 0.07 }}
                   >
                     {item.name}
                     <span
-                      className={`absolute -bottom-2 left-0 h-0.5 rounded-full bg-gradient-to-r from-[#ff7a18] via-[#dd1367] to-[#0a97d9] transition-all duration-300 ${
+                      className={`absolute -bottom-2 left-0 h-[3px] rounded-full bg-gradient-to-r from-[#ff7a18] via-[#dd1367] to-[#0a97d9] transition-all duration-300 ${
                         active ? "w-full" : "w-0 group-hover:w-full"
                       }`}
                     />
@@ -72,24 +73,24 @@ export default function Navbar() {
 
           <Link href="mailto:info@mapsinternational.net">
             <motion.button
-              className="hidden md:block px-6 py-3 rounded-full bg-[#1f342c] text-white font-bold shadow-md hover:bg-[#0f1f19] transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              className="hidden rounded-full bg-gradient-to-r from-[#1e2f28] to-[#314238] px-6 py-3 text-sm font-black text-white shadow-lg transition hover:shadow-xl md:block"
+              whileHover={{ scale: 1.045 }}
+              whileTap={{ scale: 0.96 }}
             >
               Get in touch
             </motion.button>
           </Link>
 
           <button
-            className="md:hidden text-[#1f342c]"
+            className="rounded-full bg-white/70 p-2 text-[#1e2f28] shadow-sm md:hidden"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
-            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.4} d="M6 18L18 6M6 6l12 12" />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.4} d="M4 6h16M4 12h16M4 18h16" />
               )}
             </svg>
           </button>
@@ -97,7 +98,7 @@ export default function Navbar() {
 
         {isOpen && (
           <motion.div
-            className="md:hidden mt-4 pb-5 space-y-4"
+            className="mt-4 space-y-4 rounded-[1.8rem] bg-white/70 p-5 shadow-sm md:hidden"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
           >
@@ -109,8 +110,8 @@ export default function Navbar() {
                 rel={item.external ? "noreferrer" : undefined}
               >
                 <div
-                  className={`block font-semibold transition-colors ${
-                    pathname === item.path ? "text-[#111827]" : "text-[#314238]"
+                  className={`block font-black ${
+                    pathname === item.path ? "text-[#1e2f28]" : "text-[#42544b]"
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
@@ -120,7 +121,7 @@ export default function Navbar() {
             ))}
 
             <Link href="mailto:info@mapsinternational.net">
-              <button className="w-full px-6 py-3 rounded-full bg-[#1f342c] text-white font-bold">
+              <button className="w-full rounded-full bg-[#1e2f28] px-6 py-3 font-black text-white">
                 Get in touch
               </button>
             </Link>
