@@ -54,28 +54,23 @@ export default function InitiativesPrograms() {
   const isInView = useInView(ref, { once: true, margin: "-120px" })
 
   return (
-    <section
-      ref={ref}
-      className="relative overflow-hidden bg-[#111f1a] px-6 py-24 md:py-32 text-white"
-    >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(255,122,24,0.28),transparent_28%),radial-gradient(circle_at_85%_25%,rgba(10,151,217,0.25),transparent_30%),radial-gradient(circle_at_50%_90%,rgba(221,19,103,0.20),transparent_30%)]" />
-
+    <section ref={ref} className="relative overflow-hidden youth-section-dark px-6 py-24 text-white md:py-32">
       <div className="relative z-10 mx-auto max-w-7xl">
         <motion.div
-          className="mx-auto mb-16 max-w-4xl text-center"
+          className="mb-16 max-w-5xl"
           initial={{ opacity: 0, y: 26 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.75 }}
         >
           <p className="inline-flex rounded-full bg-white/10 px-5 py-2 text-xs font-black uppercase tracking-[0.24em] text-[#ffe7a3] backdrop-blur">
             Initiatives & Programs
           </p>
 
-          <h2 className="mt-6 text-4xl font-black leading-tight md:text-6xl">
-            Platforms where youth ideas become real-world impact.
+          <h2 className="mt-6 text-4xl font-black leading-[1] tracking-[-0.035em] md:text-6xl lg:text-7xl">
+            Youth ideas deserve platforms that feel alive.
           </h2>
 
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-white/72">
+          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/72">
             THE Y.O.U.T.H™ brings together creativity, culture, innovation,
             education, sustainability, leadership, and collaboration through
             future-facing initiatives designed for young changemakers.
@@ -86,54 +81,40 @@ export default function InitiativesPrograms() {
           {initiatives.map((item, index) => (
             <motion.div
               key={item.title}
-              initial={{ opacity: 0, y: 36 }}
+              initial={{ opacity: 0, y: 34 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.7, delay: index * 0.12 }}
-              className="group relative overflow-hidden rounded-[2.3rem] border border-white/10 bg-white/10 shadow-2xl backdrop-blur-xl"
+              transition={{ duration: 0.7, delay: index * 0.1 }}
+              className="group relative overflow-hidden rounded-[2.3rem] border border-white/10 bg-white/10 shadow-[0_24px_70px_rgba(0,0,0,0.22)] backdrop-blur-xl"
             >
-              <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-20 transition duration-500 group-hover:opacity-40`} />
+              <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-18 transition duration-500 group-hover:opacity-40`} />
 
               <div className="relative h-64 overflow-hidden">
                 {item.type === "video" ? (
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-                  >
+                  <video autoPlay loop muted playsInline className="h-full w-full object-cover transition duration-700 group-hover:scale-110">
                     <source src={item.image} type="video/mp4" />
                   </video>
                 ) : (
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-                  />
+                  <img src={item.image} alt={item.title} className="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
                 )}
 
                 <div className="absolute inset-0 bg-gradient-to-t from-[#111f1a] via-[#111f1a]/25 to-transparent" />
 
-                <span className="absolute left-5 top-5 rounded-full bg-white/90 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#1e2f28]">
+                <span className="absolute left-5 top-5 rounded-full bg-white/92 px-4 py-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#1e2f28]">
                   {item.label}
                 </span>
               </div>
 
               <div className="relative p-6">
-                <h3 className="text-2xl font-black leading-tight text-white">
-                  {item.title}
-                </h3>
+                <h3 className="text-2xl font-black leading-tight text-white">{item.title}</h3>
 
-                <p className="mt-4 text-sm leading-relaxed text-white/72">
-                  {item.description}
-                </p>
+                <p className="mt-4 text-sm leading-relaxed text-white/72">{item.description}</p>
 
                 <Link
                   href={item.link}
                   target={item.external ? "_blank" : undefined}
                   rel={item.external ? "noreferrer" : undefined}
                 >
-                  <button className="mt-6 rounded-full bg-white px-6 py-3 text-sm font-black text-[#1e2f28] transition hover:bg-[#ffe7a3]">
+                  <button className="mt-6 rounded-full bg-white px-6 py-3 text-sm font-black text-[#1e2f28] transition hover:-translate-y-1 hover:bg-[#ffe7a3]">
                     Explore
                   </button>
                 </Link>
@@ -143,19 +124,21 @@ export default function InitiativesPrograms() {
         </div>
 
         <motion.div
-          className="mt-14 rounded-[2.5rem] border border-white/10 bg-white/10 p-8 text-center backdrop-blur-xl md:p-10"
+          className="mt-14 rounded-[2.5rem] border border-white/10 bg-white/10 p-8 backdrop-blur-xl md:p-10"
           initial={{ opacity: 0, y: 28 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.5 }}
+          transition={{ duration: 0.7, delay: 0.45 }}
         >
-          <h3 className="text-3xl font-black md:text-4xl">
-            More youth initiatives are coming.
-          </h3>
-          <p className="mx-auto mt-4 max-w-3xl text-white/72">
-            THE Y.O.U.T.H™ will continue expanding into leadership programs,
-            youth innovation labs, cultural learning, creative technology,
-            global collaborations, and future skills platforms.
-          </p>
+          <div className="grid gap-6 md:grid-cols-[0.8fr_1.2fr] md:items-center">
+            <h3 className="text-3xl font-black leading-tight md:text-4xl">
+              More youth initiatives are coming.
+            </h3>
+            <p className="text-white/72">
+              THE Y.O.U.T.H™ will continue expanding into leadership programs,
+              youth innovation labs, cultural learning, creative technology,
+              global collaborations, and future skills platforms.
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>
