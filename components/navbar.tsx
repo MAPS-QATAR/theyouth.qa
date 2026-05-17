@@ -18,13 +18,13 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className="fixed left-0 right-0 top-0 z-50 px-4 pt-4"
-      initial={{ y: -90, opacity: 0 }}
+      className="fixed left-0 right-0 top-0 z-50 px-3 pt-3 md:px-4 md:pt-4"
+      initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.65, ease: "easeOut" }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className="mx-auto max-w-7xl rounded-full border border-white/70 bg-[#fff8ee]/82 px-5 py-3 shadow-[0_18px_60px_rgba(30,47,40,0.12)] backdrop-blur-2xl md:px-6">
-        <div className="flex items-center justify-between gap-6">
+      <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/60 bg-[#f8f1e7]/92 px-4 py-2.5 shadow-[0_10px_34px_rgba(30,47,40,0.10)] backdrop-blur-xl md:rounded-full md:px-6 md:py-3">
+        <div className="flex items-center justify-between gap-5">
           <Link href="/" aria-label="Y.O.U.T.H. Home">
             <motion.div
               whileHover={{ scale: 1.025 }}
@@ -34,7 +34,7 @@ export default function Navbar() {
               <img
                 src="/youth-wordmark.png"
                 alt="Y.O.U.T.H. – You Own Unlimited Talent & Hope"
-                className="h-11 w-auto object-contain md:h-14"
+                className="h-9 w-auto object-contain sm:h-10 md:h-12"
               />
             </motion.div>
           </Link>
@@ -73,7 +73,7 @@ export default function Navbar() {
 
           <Link href="mailto:info@mapsinternational.net">
             <motion.button
-              className="hidden rounded-full bg-gradient-to-r from-[#1e2f28] to-[#314238] px-6 py-3 text-sm font-black text-white shadow-lg transition hover:shadow-xl md:block"
+              className="hidden rounded-full bg-gradient-to-r from-[#1e2f28] to-[#314238] px-6 py-2.5 text-sm font-black text-white shadow-[0_10px_24px_rgba(30,47,40,0.22)] transition hover:shadow-[0_14px_34px_rgba(30,47,40,0.28)] md:block"
               whileHover={{ scale: 1.045 }}
               whileTap={{ scale: 0.96 }}
             >
@@ -82,11 +82,11 @@ export default function Navbar() {
           </Link>
 
           <button
-            className="rounded-full bg-white/70 p-2 text-[#1e2f28] shadow-sm md:hidden"
+            className="flex h-12 w-12 items-center justify-center rounded-full border border-white/50 bg-white/85 text-[#1e2f28] shadow-lg backdrop-blur-md md:hidden"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
-            <svg className="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.4} d="M6 18L18 6M6 6l12 12" />
               ) : (
@@ -98,30 +98,38 @@ export default function Navbar() {
 
         {isOpen && (
           <motion.div
-            className="mt-4 space-y-4 rounded-[1.8rem] bg-white/70 p-5 shadow-sm md:hidden"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
+            className="mt-3 rounded-[1.5rem] border border-white/60 bg-white/88 p-4 shadow-[0_14px_34px_rgba(30,47,40,0.12)] backdrop-blur-xl md:hidden"
+            initial={{ opacity: 0, y: -8, height: 0 }}
+            animate={{ opacity: 1, y: 0, height: "auto" }}
+            transition={{ duration: 0.28, ease: "easeOut" }}
           >
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.path}
-                target={item.external ? "_blank" : undefined}
-                rel={item.external ? "noreferrer" : undefined}
-              >
-                <div
-                  className={`block font-black ${
-                    pathname === item.path ? "text-[#1e2f28]" : "text-[#42544b]"
-                  }`}
-                  onClick={() => setIsOpen(false)}
+            <div className="space-y-3">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.path}
+                  target={item.external ? "_blank" : undefined}
+                  rel={item.external ? "noreferrer" : undefined}
                 >
-                  {item.name}
-                </div>
-              </Link>
-            ))}
+                  <div
+                    className={`rounded-2xl px-4 py-2.5 text-base font-black transition ${
+                      pathname === item.path
+                        ? "bg-[#fff3df] text-[#1e2f28]"
+                        : "text-[#42544b] hover:bg-[#fff8ee] hover:text-[#1e2f28]"
+                    }`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </div>
+                </Link>
+              ))}
+            </div>
 
             <Link href="mailto:info@mapsinternational.net">
-              <button className="w-full rounded-full bg-[#1e2f28] px-6 py-3 font-black text-white">
+              <button
+                onClick={() => setIsOpen(false)}
+                className="mt-4 w-full rounded-full bg-gradient-to-r from-[#1e2f28] to-[#314238] px-6 py-3 font-black text-white shadow-lg"
+              >
                 Get in touch
               </button>
             </Link>
