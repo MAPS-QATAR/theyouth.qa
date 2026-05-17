@@ -13,9 +13,7 @@ const themes = [
 
 export default function EventThemes() {
   return (
-    <section className="relative overflow-hidden bg-[#fff8ee] px-6 py-24 md:py-32">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(255,122,24,0.20),transparent_28%),radial-gradient(circle_at_85%_25%,rgba(10,151,217,0.16),transparent_30%),radial-gradient(circle_at_55%_90%,rgba(221,19,103,0.13),transparent_32%)]" />
-
+    <section className="relative overflow-hidden youth-section-light px-6 py-24 md:py-32">
       <div className="relative z-10 mx-auto max-w-7xl">
         <motion.div
           className="mx-auto mb-16 max-w-4xl text-center"
@@ -27,7 +25,7 @@ export default function EventThemes() {
             Creative Focus Areas
           </p>
 
-          <h2 className="mt-6 text-4xl font-black leading-tight text-[#1e2f28] md:text-6xl">
+          <h2 className="mt-6 text-4xl font-black leading-[1] tracking-[-0.035em] text-[#1e2f28] md:text-6xl">
             Where youth talent meets future opportunity.
           </h2>
         </motion.div>
@@ -36,11 +34,11 @@ export default function EventThemes() {
           {themes.map(([title, description, icon, gradient], index) => (
             <motion.div
               key={title}
-              className="group relative overflow-hidden rounded-[2rem] bg-white p-8 shadow-sm transition hover:-translate-y-2 hover:shadow-2xl"
-              initial={{ opacity: 0, y: 30 }}
+              className="group relative overflow-hidden rounded-[2rem] bg-white/88 p-8 shadow-[0_18px_60px_rgba(30,47,40,0.08)] backdrop-blur transition hover:-translate-y-2 hover:shadow-[0_28px_90px_rgba(30,47,40,0.14)]"
+              initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.08 }}
+              transition={{ delay: index * 0.07 }}
             >
               <div className={`absolute inset-x-0 top-0 h-2 bg-gradient-to-r ${gradient}`} />
               <div className="text-5xl">{icon}</div>
